@@ -7,36 +7,36 @@ function PersonalDetails() {
                 <h3 className="font-bold my-5 text-xl text-red-700">Personal Details</h3>
                 <h3 className="font-bold my-4">Account Details</h3>
                 <div className="form-field">
-                    <label htmlFor="">
+                    <label htmlFor="email">
                         Account Email
                     </label>
-                    <input type="email" />
+                    <input id="email" name="email" type="email" required/>
                 </div>
                 <h3 className="font-bold my-4">Personal Details</h3>
                 <div className="grid gap-3">
                 <div className="form-field">
-                    <label htmlFor="">
+                    <label htmlFor="fullname">
                         Full Name
                     </label>
-                    <input type="text" />
+                    <input id="fullname" name="fullname" type="text" required/>
                 </div>
                 <div className="form-field">
-                    <label htmlFor="">
+                    <label htmlFor="dob">
                         Date of Birth
                     </label>
-                    <input type="date" />
+                    <input id="dob" name="dob" type="date" required/>
                 </div>
                 <div className="form-field">
-                    <label htmlFor="">
+                    <label htmlFor="place">
                         Place of Birth(City,Country)
                     </label>
-                    <input type="text" />
+                    <input id="place" type="text" />
                 </div>
                 <div className="form-field">
-                    <label htmlFor="">
+                    <label htmlFor="gender">
                         Gender
                     </label>
-                    <select name="" id="">
+                    <select name="gender" id="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="others">Others</option>
@@ -124,9 +124,11 @@ function PersonalDetails() {
                 </div>
                 </div>
 
-                <button className="bg-blue-500 text-white w-20 my-4 p-1 rounded">
+                <div className="text-right">
+                <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
                     Next
                 </button>
+                </div>
             </form>
         </div>
     )

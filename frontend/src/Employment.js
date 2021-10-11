@@ -157,9 +157,11 @@ function Employment() {
                 </div>
                 </div>
                 
+                <div className="text-right">
                 <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
                     Next
                 </button>
+                </div>
             </form>
         </div>
     )
