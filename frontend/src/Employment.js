@@ -10,12 +10,12 @@ function Employment({nextform, prevform, details, setDetails}) {
 
     const saveInfoNext = (e)=>{
         e.preventDefault();
-        props.nextform();
+        nextform();
     }
 
     const goPrev = (e)=>{
         e.preventDefault();
-        props.prevform();
+        prevform();
     }
 
     return (
@@ -28,37 +28,37 @@ function Employment({nextform, prevform, details, setDetails}) {
                     <label htmlFor="employer">
                         Employer
                     </label>
-                    <input type="text" id="employer" name="employer" value={details.phd.employer} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="text" id="employer" name="employer" value={details.postphd.employer} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="department">
                         Department/Division
                     </label>
-                    <input type="text" id="department" name="department" value={details.phd.department} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="text" id="department" name="department" value={details.postphd.department} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="position">
                         Position held
                     </label>
-                    <input type="text" id="position" name="position" value={details.phd.position} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="text" id="position" name="position" value={details.postphd.position} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="nature">
                         Nature of Work
                     </label>
-                    <input type="text" id="nature" name="nature" value={details.phd.nature} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="text" id="nature" name="nature" value={details.postphd.nature} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="startdate">
                         Start Date
                     </label>
-                    <input type="date" id="startdate" name="startdate" value={details.phd.startdate} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="date" id="startdate" name="startdate" value={details.postphd.startdate} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="enddate">
                         End Date
                     </label>
-                    <input type="date" id="enddate" name="enddate" value={details.phd.enddate} onChange={e=>{updateEmployment(e,"postphd")}}/>
+                    <input type="date" id="enddate" name="enddate" value={details.postphd.enddate} onChange={e=>{updateEmployment(e,"postphd")}}/>
                 </div>
                 </div>
 
@@ -68,37 +68,37 @@ function Employment({nextform, prevform, details, setDetails}) {
                     <label htmlFor="employer">
                         Employer
                     </label>
-                    <input type="text" id="employer" name="employer" value={details.phd.employer} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="text" id="employer" name="employer" value={details.prephd.employer} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="department">
                         Department/Division
                     </label>
-                    <input type="text" id="department" name="department" value={details.phd.department} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="text" id="department" name="department" value={details.prephd.department} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="position">
                         Position held
                     </label>
-                    <input type="text" id="position" name="position" value={details.phd.position} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="text" id="position" name="position" value={details.prephd.position} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="nature">
                         Nature of Work
                     </label>
-                    <input type="text" id="nature" name="nature" value={details.phd.nature} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="text" id="nature" name="nature" value={details.prephd.nature} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="startdate">
                         Start Date
                     </label>
-                    <input type="date" id="startdate" name="startdate" value={details.phd.startdate} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="date" id="startdate" name="startdate" value={details.prephd.startdate} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 <div className="form-field">
                     <label htmlFor="enddate">
                         End Date
                     </label>
-                    <input type="date" id="enddate" name="enddate" value={details.phd.enddate} onChange={e=>{updateEmployment(e,"prephd")}}/>
+                    <input type="date" id="enddate" name="enddate" value={details.prephd.enddate} onChange={e=>{updateEmployment(e,"prephd")}}/>
                 </div>
                 </div>
                 
