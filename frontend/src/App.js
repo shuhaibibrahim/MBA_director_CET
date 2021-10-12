@@ -4,9 +4,10 @@ import PersonalDetails from './PersonalDetails'
 import Education from './Education'
 import Employment from './Employment'
 import Awards from './Awards'
+
 export default function App() {
 
-  const [details,setDetails] = useState({
+  const personal={
     email:"",
     fullname:"",
     dob:"",
@@ -24,9 +25,65 @@ export default function App() {
     tr:"",//teaching/research
     cc:"",//core courses
     ec:"" //elective courses
-})
+  }
+
+  const phd={
+    degree:"",
+    title:"",
+    affiliation:"",
+    supervisor:"",
+    university:"",
+    discipline:"",
+    college:"",
+    startdate:"",
+    submitdate:"",
+    defenddate:""
+  }
+
+  const degree={
+    name:"",
+    discipline:"",
+    university:"",
+    startdate:"",
+    enddate:"",
+    division:"",
+    system:"",
+    marks:"",
+    college:"",
+    others:""
+  }
+
+  const education={
+    phd:{...phd},
+    masters:{...degree},
+    bachelors1:{...degree},
+    bachelors2:{...degree},
+    other:{...degree}
+  }
+
+  const empdetails={
+    employer:"",
+    department:"",
+    position:"",
+    nature:"",
+    startdate:"",
+    enddate:"",
+  }
+
+  const employment={
+    prephd: {...empdetails},
+    postphd: {...empdetails}
+  }
+
+  //final state
+  const [details,setDetails] = useState({
+    ...personal,
+    ...education,
+    ...employment
+  })
 
   const[formno,setformno]=useState(1);
+  
   const scrollTop = ()=>{
     window.scrollTo({
       top:0,
@@ -43,7 +100,6 @@ export default function App() {
     scrollTop();
   }
   
-
   return (
     <div className="App">
     {
@@ -52,15 +108,15 @@ export default function App() {
     }
     {
       formno===2&&
-      <Education nextform={nextform} prevform={prevform}/>
+      <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails}/>
     }
     {
       formno===3&&
-      <Employment nextform={nextform} prevform={prevform}/>
+      <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails}/>
     }
     {
       formno===4&&
-      <Awards nextform={nextform} prevform={prevform}/>
+      <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails}/>
     }
   
     </div>
