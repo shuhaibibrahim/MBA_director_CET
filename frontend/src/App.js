@@ -61,9 +61,25 @@ export default function App() {
     other:{...degree}
   }
 
+  const empdetails={
+    employer:"",
+    department:"",
+    position:"",
+    nature:"",
+    startdate:"",
+    enddate:"",
+  }
+
+  const employment={
+    prephd: {...empdetails},
+    postphd: {...empdetails}
+  }
+
+  //final state
   const [details,setDetails] = useState({
     ...personal,
-    ...education
+    ...education,
+    ...employment
   })
 
   const[formno,setformno]=useState(1);

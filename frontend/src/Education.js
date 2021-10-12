@@ -340,9 +340,6 @@ function Education({nextform, prevform, details, setDetails}) {
                 <input type="text" id="others" name="others" value={details.other.others} onChange={e=>{updateEducation(e,"others")}}/>
                 </div>
                 </div>
-
-                
-
                 
                 <div className="flex items-center justify-between">
                 <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
