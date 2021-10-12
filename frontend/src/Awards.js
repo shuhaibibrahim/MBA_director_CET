@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-function Awards() {
+function Awards(props) {
     const[awards,setAwards]=useState([
         {award:'',org:'',year:''},
     ]);
@@ -64,6 +64,16 @@ function Awards() {
         setThesis([...thesis,{studentname:'',title:'',supervisor:'',year:''}])
     }
 
+    const saveInfoNext = (e)=>{
+        e.preventDefault();
+        props.nextform();
+    }
+
+    const goPrev = (e)=>{
+        e.preventDefault();
+        props.prevform();
+    }
+    
     return (
         <div>
             <form>
@@ -356,8 +366,11 @@ function Awards() {
                 <button onClick={addProject5} className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded">Add Another</button>
                 </div>
 
-                <div className="text-right">
-                <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                <div className="flex items-center justify-between">
+                <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                    Prev
+                </button>
+                <button onClick={saveInfoNext} className="bg-green-700 text-white w-20 my-5 p-1 rounded">
                     Next
                 </button>
                 </div>
