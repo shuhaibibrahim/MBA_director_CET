@@ -1,6 +1,18 @@
 import React from 'react'
 
-function Employment() {
+function Employment(props) {
+
+    
+    const saveInfoNext = (e)=>{
+        e.preventDefault();
+        props.nextform();
+    }
+
+    const goPrev = (e)=>{
+        e.preventDefault();
+        props.prevform();
+    }
+
     return (
         <div>
             <form className="flex flex-col">
@@ -157,8 +169,11 @@ function Employment() {
                 </div>
                 </div>
                 
-                <div className="text-right">
-                <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                <div className="flex items-center justify-between">
+                <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                    Prev
+                </button>
+                <button onClick={saveInfoNext} className="bg-green-700 text-white w-20 my-5 p-1 rounded">
                     Next
                 </button>
                 </div>
