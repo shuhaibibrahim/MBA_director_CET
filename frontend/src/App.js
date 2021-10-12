@@ -4,6 +4,7 @@ import PersonalDetails from './PersonalDetails'
 import Education from './Education'
 import Employment from './Employment'
 import Awards from './Awards'
+import Books from './Books'
 
 export default function App() {
 
@@ -79,7 +80,22 @@ export default function App() {
   const [details,setDetails] = useState({
     ...personal,
     ...education,
-    ...employment
+    ...employment,
+    awards:[],
+    singlySupervisedThesis:null,
+    jointlySupervisedThesis:null,
+    thesis:[],
+    thesisSupervised:null,
+    sponsoredRD1:null,
+    sponsoredRD2:null,
+    sponsoredRD3:null,
+    sponsoredRD4:null,
+    sponsoredRD5:null,
+    projects1:[],
+    projects2:[],
+    projects3:[],
+    projects4:[],
+    projects5:[]
   })
 
   const[formno,setformno]=useState(1);
@@ -117,6 +133,10 @@ export default function App() {
     {
       formno===4&&
       <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails}/>
+    }
+    {
+      formno===5&&
+      <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails}/>
     }
   
     </div>
