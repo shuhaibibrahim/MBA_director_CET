@@ -159,7 +159,7 @@ function PersonalDetails() {
                 </div>
 
                 <div className="text-right">
-                <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded" onClick={saveInfo}>
+                <button className="bg-blue-500 text-white w-20 my-5 p-1 rounded" onClick={saveInfoNext}>
                     Next
                 </button>
                 </div>
