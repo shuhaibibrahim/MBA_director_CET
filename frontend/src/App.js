@@ -111,7 +111,8 @@ export default function App() {
         publications3:[],
         publications4:[],
         publications5:[],
-        patents: []
+        patents: [],
+        filedPatents: []
     });
 
   const [formno, setformno] = useState(1);
