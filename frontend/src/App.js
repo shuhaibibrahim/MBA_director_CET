@@ -81,6 +81,7 @@ export default function App() {
         ...personal,
         ...education,
         ...employment,
+        //Awards and thesis
         awards: [],
         singlySupervisedThesis: null,
         jointlySupervisedThesis: null,
@@ -96,6 +97,19 @@ export default function App() {
         projects3: [],
         projects4: [],
         projects5: [],
+        //Books and Publications
+        noBooks:0,
+        books:[],
+        noPublished1:0, //No.of papers published as a chapter in a book
+        noPublished2:0,
+        noPublished3:0,
+        noPublished4:0,
+        noPublished5:0,
+        publications1:[],
+        publications2:[],
+        publications3:[],
+        publications4:[],
+        publications5:[]
     });
 
     const [formno, setformno] = useState(1);

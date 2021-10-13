@@ -2,6 +2,15 @@ import React,{useState,useEffect} from 'react'
 
 function Awards({nextform, prevform, details, setDetails}) {
 
+
+    const[award,setAward]=useState({title:'',org:'',year:'',id:0});
+    const[thesis,setThesis]=useState({studentname:'',title:'',supervisor:'',year:'',id:0});
+    const[projects1,setProjects1]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
+    const[projects2,setProjects2]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
+    const[projects3,setProjects3]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
+    const[projects4,setProjects4]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
+    const[projects5,setProjects5]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
+
     const[renderAward,setRenderAward]=useState(null);
     const[renderThesis,setRenderThesis]=useState(null);
     const[renderProjects1,setRenderProjects1]=useState(null);
@@ -18,6 +27,31 @@ function Awards({nextform, prevform, details, setDetails}) {
         newList=newList.filter(item=>item.id!==id)
         newDetails[name]=newList;
         setDetails(newDetails)
+    }
+
+    const addToList = (e,name,item) =>{
+        e.preventDefault();
+        var newDetails={...details}
+        item.id=newDetails[name].length+1; //generate ID
+        newDetails[name].push(item)
+        setDetails(newDetails)
+        
+    }
+
+    function update(e){             //General function to update input
+        var newdetails={...details}
+        newdetails[e.target.name]=e.target.value
+        setDetails(newdetails)
+    }
+
+    const saveInfoNext = (e)=>{
+        e.preventDefault();
+        nextform();
+    }
+
+    const goPrev = (e)=>{
+        e.preventDefault();
+        prevform();
     }
     
     useEffect(() => {
@@ -185,80 +219,8 @@ function Awards({nextform, prevform, details, setDetails}) {
                 </div>
             ))
         )
-
-
         
     },[details])
-
-    const[award,setAward]=useState({title:'',org:'',year:'',id:0});
-    const[thesis,setThesis]=useState({studentname:'',title:'',supervisor:'',year:'',id:0});
-    const[projects1,setProjects1]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
-    const[projects2,setProjects2]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
-    const[projects3,setProjects3]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
-    const[projects4,setProjects4]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
-    const[projects5,setProjects5]=useState({title:'',sponsor:'',years:'',amount:'',id:0});
-    
-    const addToList = (e,name,item) =>{
-        e.preventDefault();
-        var newDetails={...details}
-        item.id=newDetails[name].length+1; //generate ID
-        newDetails[name].push(item)
-        setDetails(newDetails)
-        
-    }
-
-    function update(e){             //General function to update input
-        var newdetails={...details}
-        newdetails[e.target.name]=e.target.value
-        setDetails(newdetails)
-    }
-
-
-
-    const addProject1 = (e)=>{
-        e.preventDefault();
-        setProjects1([...projects1,{title:'',sponsor:'',years:'',amount:''}])
-    }
-
-    const addProject2 = (e)=>{
-        e.preventDefault();
-        setProjects2([...projects2,{title:'',sponsor:'',years:'',amount:''}])
-    }
-
-    const addProject3 = (e)=>{
-        e.preventDefault();
-        setProjects3([...projects3,{title:'',sponsor:'',years:'',amount:''}])
-    }
-
-    const addProject4 = (e)=>{
-        e.preventDefault();
-        setProjects4([...projects4,{title:'',sponsor:'',years:'',amount:''}])
-    }
-
-    const addProject5 = (e)=>{
-        e.preventDefault();
-        setProjects5([...projects5,{title:'',sponsor:'',years:'',amount:''}])
-    }
-
-    // const addAward = (e)=>{
-    //     e.preventDefault();
-    //     setAwards([...awards,{award:'',org:'',year:''}])
-    // }
-
-    // const addThesis = (e)=>{
-    //     e.preventDefault();
-    //     setThesis([...thesis,{studentname:'',title:'',supervisor:'',year:''}])
-    // }
-
-    const saveInfoNext = (e)=>{
-        e.preventDefault();
-        nextform();
-    }
-
-    const goPrev = (e)=>{
-        e.preventDefault();
-        prevform();
-    }
     
     return (
         <div>
@@ -561,12 +523,6 @@ function Awards({nextform, prevform, details, setDetails}) {
                 <button onClick={(e)=>{addToList(e,'projects5',projects5);setProjects5({title:'',sponsor:'',years:'',amount:'',id:0})}} className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded">Add to List</button>
                 </div>
 
-
-                
-
-                
-
-
                 <div className="flex items-center justify-between">
                 <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
                     Prev
@@ -575,8 +531,6 @@ function Awards({nextform, prevform, details, setDetails}) {
                     Next
                 </button>
                 </div>
-                
-
             </form>
         </div>
     )
