@@ -1,9 +1,20 @@
 import React from 'react'
 import { PDFExport } from "@progress/kendo-react-pdf";
+import { db } from './firebase_config'
+import { ref, set } from 'firebase/database'
 
-
-function GeneratePDF({details,setformno,scrollTop}) {
+function GeneratePDF({details,setformno,scrollTop,user}) {
     const pdfExportComponent = React.useRef(null);
+
+    const pushToDatabase=()=>{
+      
+      console.log(user)
+      set(ref(db, 'users/' + user.uid), {
+        ...details,
+        userSignInEmail:user.email
+      });
+    }
+
     return (
         <div>
 
@@ -517,6 +528,7 @@ function GeneratePDF({details,setformno,scrollTop}) {
             <button
                 className="my-4 bg-green-700 text-sm px-3 py-2 text-white rounded"
                 onClick={() => {
+                pushToDatabase()
                 if (pdfExportComponent.current) {
                     pdfExportComponent.current.save();
                 }
