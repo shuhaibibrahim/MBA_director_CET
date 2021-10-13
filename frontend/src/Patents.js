@@ -103,7 +103,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
           <button
             className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
             onClick={(e) => {
-              removeItem(e, "patents", item.id);
+              removeItem(e, "filedPatents", item.id);
             }}
           >
             Remove
@@ -323,7 +323,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
         <div className="text-center">
           <button
             onClick={(e) => {
-              addToList(e, "patents", filedPatent);
+              addToList(e, "filedPatents", filedPatent);
               setFiledPatent({
                 ...emptyPatentObject,
                 id: details.patents.length,
