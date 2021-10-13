@@ -7,6 +7,7 @@ import Awards from "./Awards";
 import Books from "./Books";
 import Patents from "./Patents";
 import TitleSVG from "./TitleSVG";
+import GeneratePDF from './GeneratePDF';
 
 export default function App() {
   const personal = {
@@ -184,7 +185,13 @@ export default function App() {
             setDetails={setDetails}
           />
         )}
+
+        {formno === 7 && (
+          <GeneratePDF details={details}/>
+        )}
       </div>
+
+      {formno!=7&&(<button className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2" onClick={e=>{setformno(7)}}>Finish</button>)}
     </>
   );
 }
