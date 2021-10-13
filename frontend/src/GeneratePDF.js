@@ -2,7 +2,7 @@ import React from 'react'
 import { PDFExport } from "@progress/kendo-react-pdf";
 
 
-function GeneratePDF({details}) {
+function GeneratePDF({details,setformno,scrollTop}) {
     const pdfExportComponent = React.useRef(null);
     return (
         <div>
@@ -460,7 +460,7 @@ function GeneratePDF({details}) {
                     </div>
 
                     <h3 className="font-bold my-4">Patents Filed</h3>
-                    <p className="mb-1"><span className="font-semibold">No. of international / Indian patents filed</span>: {details.nofiledPatents}</p>
+                    <p className="mb-1"><span className="font-semibold">No. of international / Indian patents filed</span>: {details.noFiledPatents}</p>
                     <div className="divide-y-2 divide-dashed divide-red-500">
                     {
                         details.filedPatents.map((item) => (
@@ -482,11 +482,40 @@ function GeneratePDF({details}) {
                     } 
                     </div>
 
+                    <h3 className="font-bold my-4">Referees</h3>
+                    
+                    <div className="divide-y-2 divide-dashed divide-red-500">
+                    {
+                        details.referee.map((item) => (
+                            <div
+                              key={item.id}
+                              className="flex items-center mb-2 justify-between"
+                            >
+                            <div className="flex flex-col">
+                                <div><span className="font-semibold">Name</span>: {item.name}</div>
+                                <div><span className="font-semibold">Designation</span>: {item.designation}</div>
+                                <div><span className="font-semibold">Organization</span>: {item.organization}</div>
+                                <div><span className="font-semibold">Email Address</span>: {item.email}</div>
+                                <div><span className="font-semibold">Postal Address</span>: {item.postaladdress}</div>
+                                <div><span className="font-semibold">Phone Number</span>: {item.phoneno}</div>
+                            </div>
+                
+                            </div>
+                          ))
+                    } 
+                    </div>
+
 
         </PDFExport>            
-        <div className="example-config">
+        <div className="flex justify-end space-x-3">
             <button
-                className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
+                className="my-4 bg-blue-600 text-sm px-3 py-2 text-white rounded"
+                onClick={()=>{setformno(1);scrollTop()}}
+            > Edit
+            </button>
+
+            <button
+                className="my-4 bg-green-700 text-sm px-3 py-2 text-white rounded"
                 onClick={() => {
                 if (pdfExportComponent.current) {
                     pdfExportComponent.current.save();
@@ -494,7 +523,6 @@ function GeneratePDF({details}) {
                 }}
             > Submit
             </button>
-
         </div>
         </div>
     )

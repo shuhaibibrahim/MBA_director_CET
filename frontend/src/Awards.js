@@ -426,7 +426,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
           >
             Add to List
           </button>
@@ -534,7 +534,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
           >
             Add to List
           </button>
@@ -622,8 +622,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
-          >
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded">
             Add to List
           </button>
         </div>
@@ -710,7 +709,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
           >
             Add to List
           </button>
@@ -798,7 +797,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
           >
             Add to List
           </button>
@@ -886,8 +885,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 id: 0,
               });
             }}
-            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded"
-          >
+            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded">
             Add to List
           </button>
         </div>

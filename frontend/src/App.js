@@ -6,6 +6,7 @@ import Employment from "./Employment";
 import Awards from "./Awards";
 import Books from "./Books";
 import Patents from "./Patents";
+import Referee from "./Referee"
 import TitleSVG from "./TitleSVG";
 import GeneratePDF from './GeneratePDF';
 
@@ -112,8 +113,11 @@ export default function App() {
         publications3:[],
         publications4:[],
         publications5:[],
+        noPatents:0,
+        noFiledPatents:0,
         patents: [],
-        filedPatents: []
+        filedPatents: [],
+        referee:[]
     });
 
   const [formno, setformno] = useState(1);
@@ -185,13 +189,20 @@ export default function App() {
             setDetails={setDetails}
           />
         )}
-
         {formno === 7 && (
-          <GeneratePDF details={details}/>
+          <Referee
+            nextform={nextform}
+            prevform={prevform}
+            details={details}
+            setDetails={setDetails}
+          />
+        )}
+
+        {formno === 8 && (
+          <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details}/>
         )}
       </div>
 
-      {formno!=7&&(<button className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2" onClick={e=>{setformno(7)}}>Finish</button>)}
     </>
   );
 }

@@ -120,10 +120,10 @@ function Patents({ nextform, prevform, details, setDetails }) {
         <h2 className="font-bold my-3">Patents Awarded</h2>
         <div className="transition duration-500 ease-in-out">
           <div>
-            <label htmlFor="">
+            <label htmlFor="noPatents">
               No. of international /Indian patents issued:
             </label>
-            <input className="w-20 ml-5" type="text" />
+            <input className="w-20 ml-5" type="text" id="noPatents" name="noPatents" onChange={update}/>
           </div>
           <h2 className="font-bold text-sm my-3">
             Provide details of up to 4 mostsignificant & recent patents
@@ -229,10 +229,10 @@ function Patents({ nextform, prevform, details, setDetails }) {
         <h2 className="font-bold my-3">Patents Filed</h2>
         <div className="transition duration-500 ease-in-out">
           <div>
-            <label htmlFor="">
+            <label htmlFor="noFiledPatents">
               No. of international /Indian patents filed:
             </label>
-            <input className="w-20 ml-5" type="text" />
+            <input className="w-20 ml-5" type="text" id="noFiledPatents" name="noFiledPatents" onChange={update}/>
           </div>
           <h2 className="font-bold text-sm my-3">
             Provide details of up to 4 mostsignificant & recent patents
