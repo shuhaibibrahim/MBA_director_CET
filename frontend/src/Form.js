@@ -138,41 +138,28 @@ export default function Form({ user, logout }) {
     };
 
     return (
-        <>
-            <button
-                className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
-                onClick={() => {
-                    logout();
-                }}
-            >
-                Logout
-            </button>
+        <div className="App">
+            {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} />}
+            {formno === 2 && (
+                <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
+            {formno === 3 && (
+                <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
+            {formno === 4 && (
+                <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
+            {formno === 5 && (
+                <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
+            {formno === 6 && (
+                <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
+            {formno === 7 && (
+                <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+            )}
 
-            <div className="App">
-                {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} />}
-                {formno === 2 && (
-                    <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-                {formno === 3 && (
-                    <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-                {formno === 4 && (
-                    <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-                {formno === 5 && (
-                    <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-                {formno === 6 && (
-                    <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-                {formno === 7 && (
-                    <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
-                )}
-
-                {formno === 8 && (
-                    <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />
-                )}
-            </div>
-        </>
+            {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}
+        </div>
     );
 }
