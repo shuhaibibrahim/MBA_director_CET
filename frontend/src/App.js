@@ -25,10 +25,12 @@ export default function App() {
     };
 
     return (
-        <div className="container bg-gray-100 min-h-screen flex flex-col">
-            <header className="bg-white shadow-lg px-20 py-4">
-                <div className="w-64">
-                    <TitleSVG />
+        <div className="bg-gray-100 min-h-screen flex flex-col">
+            <header className="bg-white shadow-md py-4">
+                <div className="w-9/12 m-auto">
+                    <div className="w-64">
+                        <TitleSVG />
+                    </div>
                 </div>
             </header>
             {/* <Form user={user} logout={logout} /> */}

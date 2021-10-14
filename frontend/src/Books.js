@@ -213,6 +213,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
             ))
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [details]);
 
     const removeItem = (e, name, id) => {

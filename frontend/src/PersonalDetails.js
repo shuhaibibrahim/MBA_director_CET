@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { db } from "./firebase_config";
+import React from "react";
+// import { db } from "./firebase_config";
 
 function PersonalDetails({ nextform, details, setDetails }) {
     function updatePersonal(e) {

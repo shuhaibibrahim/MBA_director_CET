@@ -21,11 +21,19 @@ function Login({ setUser }) {
     };
 
     return (
-        <div className="flex-1 flex justify-center">
-            <div className="bg-white shadow-md">
-                <label htmlFor="email">Email</label>
+        <div className="flex-75 flex justify-center items-center">
+            <div className="bg-white shadow-md text-center h-fit w-96 p-8 rounded-xl transition-all">
+                {/* <h1 className="text-2xl font-bold">MBA Director Application</h1> */}
+                {hasAccount ? (
+                    <h2 class="text-2xl font-extrabold pb-4">Log in to your account</h2>
+                ) : (
+                    <h2 class="text-2xl font-extrabold pb-4">Sign up to apply</h2>
+                )}
+                <label className="form-label mb-1" htmlFor="email">
+                    Email address
+                </label>
                 <input
-                    className="form-control"
+                    className="form-control block w-full mb-3"
                     type="email"
                     required
                     value={email}
@@ -34,9 +42,11 @@ function Login({ setUser }) {
                     }}
                 />
 
-                <label htmlFor="password">Password</label>
+                <label className="form-label mb-1" htmlFor="password">
+                    Password
+                </label>
                 <input
-                    className="form-control"
+                    className="form-control block w-full mb-3"
                     type="password"
                     required
                     value={password}
@@ -44,14 +54,17 @@ function Login({ setUser }) {
                         setPassword(e.target.value);
                     }}
                 />
-                {error && <div className="text-red-500">{error}</div>}
+                {error && <div className="text-red-600">{error}</div>}
                 {hasAccount ? (
                     <div>
-                        <button onClick={login}>Sign In</button>
+                        <button className="btn w-full mt-3" onClick={login}>
+                            Log In
+                        </button>
+                        <hr className="mt-6 mb-5" />
                         <p>
                             Dont have an account?{" "}
                             <span
-                                className="cursor-pointer"
+                                className="cursor-pointer text-primary hover:underline hover:text-primary-dark"
                                 onClick={() => {
                                     setHasAccount(!hasAccount);
                                 }}
@@ -62,16 +75,19 @@ function Login({ setUser }) {
                     </div>
                 ) : (
                     <div>
-                        <button onClick={signup}>Sign Up</button>
+                        <button className="btn w-full mt-3" onClick={signup}>
+                            Sign Up
+                        </button>
+                        <hr className="mt-6 mb-5" />
                         <p>
                             Already have an account?{" "}
                             <span
-                                className="cursor-pointer"
+                                className="cursor-pointer text-primary hover:underline hover:text-primary-dark"
                                 onClick={() => {
                                     setHasAccount(!hasAccount);
                                 }}
                             >
-                                Sign In
+                                Log In
                             </span>
                         </p>
                     </div>

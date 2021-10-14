@@ -31,6 +31,7 @@ function Referee({ nextform, prevform, details, setDetails }) {
         setDetails(newDetails);
     };
 
+    // eslint-disable-next-line no-unused-vars
     function update(e) {
         //General function to update input
         var newdetails = { ...details };
@@ -72,6 +73,7 @@ function Referee({ nextform, prevform, details, setDetails }) {
                 </div>
             ))
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [details]);
 
     return (
