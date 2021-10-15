@@ -24,8 +24,8 @@ function Login({ setUser, onBoarding, setOnBoarding, hasAccount, setHasAccount }
             {onBoarding ? (
                 <div className="flex-75 flex justify-center items-center">
                     <div className="text-center h-fit">
-                        <h2 className="text-3xl font-light mb-2">CET School of Management is inviting</h2>
-                        <h1 className="text-5xl font-semibold mb-8">Application for MBA Director</h1>
+                        <h2 className="text-3xl font-light text-gray-700 mb-2">CET School of Management is inviting</h2>
+                        <h1 className="text-5xl font-semibold text-gray-700 mb-8">Application for MBA Director</h1>
                         <button className="btn-lg" onClick={() => setOnBoarding(!onBoarding)}>
                             Apply Now
                         </button>
@@ -34,9 +34,9 @@ function Login({ setUser, onBoarding, setOnBoarding, hasAccount, setHasAccount }
             ) : (
                 <div className="bg-white shadow-md text-center h-fit w-96 p-8 rounded-xl">
                     {hasAccount ? (
-                        <h2 class="text-2xl font-extrabold pb-4">Log in to your account</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-700 pb-4">Log in to your account</h2>
                     ) : (
-                        <h2 class="text-2xl font-extrabold pb-4">Sign up to apply</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-700 pb-4">Sign up to apply</h2>
                     )}
                     <label className="form-label mb-1" htmlFor="email">
                         Email address

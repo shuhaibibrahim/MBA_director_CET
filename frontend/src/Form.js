@@ -138,7 +138,8 @@ export default function Form({ user, logout }) {
     };
 
     return (
-        <div className="App">
+        <>
+            <h1 className="text-3xl text-gray-700 mt-8 text-center">Application for MBA Director</h1>
             {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} />}
             {formno === 2 && (
                 <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
@@ -160,6 +161,6 @@ export default function Form({ user, logout }) {
             )}
 
             {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}
-        </div>
+        </>
     );
 }

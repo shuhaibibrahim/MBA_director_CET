@@ -3,12 +3,6 @@
     box-sizing: border-box;
 }
 
-.App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .h-fit {
     height: fit-content;
 }
