@@ -18,162 +18,204 @@ function Employment({ nextform, prevform, details, setDetails }) {
     };
 
     return (
-        <div>
-            <form className="flex flex-col">
-                <h3 className="font-bold text-lg my-4">Employment Details</h3>
-                <h2 className="font-bold my-4">
-                    (i) Post-PhD employment details (from date thesis is approved till today in chronological order)
-                </h2>
-                <div className="grid gap-y-3">
-                    <div className="form-field">
-                        <label htmlFor="employer">Employer</label>
-                        <input
-                            type="text"
-                            id="employer"
-                            name="employer"
-                            value={details.postphd.employer}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="department">Department/Division</label>
-                        <input
-                            type="text"
-                            id="department"
-                            name="department"
-                            value={details.postphd.department}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="position">Position held</label>
-                        <input
-                            type="text"
-                            id="position"
-                            name="position"
-                            value={details.postphd.position}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="nature">Nature of Work</label>
-                        <input
-                            type="text"
-                            id="nature"
-                            name="nature"
-                            value={details.postphd.nature}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="startdate">Start Date</label>
-                        <input
-                            type="date"
-                            id="startdate"
-                            name="startdate"
-                            value={details.postphd.startdate}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="enddate">End Date</label>
-                        <input
-                            type="date"
-                            id="enddate"
-                            name="enddate"
-                            value={details.postphd.enddate}
-                            onChange={(e) => {
-                                updateEmployment(e, "postphd");
-                            }}
-                        />
+        <div className="w-9/12 mx-auto my-6">
+            <h2 className="font-bold text-3xl text-secondary">Employment Details</h2>
+            <hr className="my-4" />
+            <form className="my-7">
+                <div className="sm:flex justify-between">
+                    <h3 className="section-label pr-2">
+                        Post-PhD employment details (from date thesis is approved till today in chronological order)
+                    </h3>
+
+                    <div className="form-card rounded-tl-xl rounded-tr-xl">
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="employer">
+                                Employer
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="employer"
+                                name="employer"
+                                value={details.postphd.employer}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="department">
+                                Department/Division
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="department"
+                                name="department"
+                                value={details.postphd.department}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="position">
+                                Position held
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="position"
+                                name="position"
+                                value={details.postphd.position}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="nature">
+                                Nature of Work
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="nature"
+                                name="nature"
+                                value={details.postphd.nature}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="startdate">
+                                Start Date
+                            </label>
+                            <input
+                                className="form-control"
+                                type="date"
+                                id="startdate"
+                                name="startdate"
+                                value={details.postphd.startdate}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="enddate">
+                                End Date
+                            </label>
+                            <input
+                                className="form-control"
+                                type="date"
+                                id="enddate"
+                                name="enddate"
+                                value={details.postphd.enddate}
+                                onChange={(e) => {
+                                    updateEmployment(e, "postphd");
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
 
-                <h2 className="font-bold my-4">
-                    (ii) Pre-PhD employment details (Post-BTech/Msc/MCA till date of joining PhD Programme)
-                </h2>
-                <div className="grid gap-y-3">
-                    <div className="form-field">
-                        <label htmlFor="employer">Employer</label>
-                        <input
-                            type="text"
-                            id="employer"
-                            name="employer"
-                            value={details.prephd.employer}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="department">Department/Division</label>
-                        <input
-                            type="text"
-                            id="department"
-                            name="department"
-                            value={details.prephd.department}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="position">Position held</label>
-                        <input
-                            type="text"
-                            id="position"
-                            name="position"
-                            value={details.prephd.position}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="nature">Nature of Work</label>
-                        <input
-                            type="text"
-                            id="nature"
-                            name="nature"
-                            value={details.prephd.nature}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="startdate">Start Date</label>
-                        <input
-                            type="date"
-                            id="startdate"
-                            name="startdate"
-                            value={details.prephd.startdate}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
-                    </div>
-                    <div className="form-field">
-                        <label htmlFor="enddate">End Date</label>
-                        <input
-                            type="date"
-                            id="enddate"
-                            name="enddate"
-                            value={details.prephd.enddate}
-                            onChange={(e) => {
-                                updateEmployment(e, "prephd");
-                            }}
-                        />
+                <div className="sm:flex justify-between">
+                    <h3 className="section-label pr-2">
+                        Pre-PhD employment details (Post-BTech/Msc/MCA till date of joining PhD Programme)
+                    </h3>
+                    <div className="form-card rounded-bl-xl rounded-br-xl">
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="employer">
+                                Employer
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="employer"
+                                name="employer"
+                                value={details.prephd.employer}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="department">
+                                Department/Division
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="department"
+                                name="department"
+                                value={details.prephd.department}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="position">
+                                Position held
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="position"
+                                name="position"
+                                value={details.prephd.position}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="nature">
+                                Nature of Work
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="nature"
+                                name="nature"
+                                value={details.prephd.nature}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="startdate">
+                                Start Date
+                            </label>
+                            <input
+                                className="form-control"
+                                type="date"
+                                id="startdate"
+                                name="startdate"
+                                value={details.prephd.startdate}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="enddate">
+                                End Date
+                            </label>
+                            <input
+                                className="form-control"
+                                type="date"
+                                id="enddate"
+                                name="enddate"
+                                value={details.prephd.enddate}
+                                onChange={(e) => {
+                                    updateEmployment(e, "prephd");
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
 

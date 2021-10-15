@@ -17,18 +17,18 @@ function PersonalDetails({ nextform, details, setDetails }) {
 
     return (
         <div className="w-9/12 mx-auto my-6">
-            <h2 className="font-bold text-3xl text-tertiary">Personal Details</h2>
+            <h2 className="font-bold text-3xl text-secondary">Personal Details</h2>
             <hr className="my-4" />
 
             <form className="my-7">
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label">Account Details</h3>
-                    <div className="form-card rounded-tl-xl rounded-tr-xl">
+                    <h3 className="section-label pr-2">Account Details</h3>
+                    <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
                         <label className="form-label mb-1" htmlFor="email">
                             Account Email
                         </label>
                         <input
-                            className="form-control w-full sm:w-7/12"
+                            className="form-control sm:w-96"
                             id="email"
                             name="email"
                             type="email"
@@ -39,14 +39,14 @@ function PersonalDetails({ nextform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label">Personal Details</h3>
-                    <div className="form-card">
+                    <h3 className="section-label pr-2">Personal Details</h3>
+                    <div className="form-card rounded-xl sm:rounded-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="fullname">
                                 Full Name
                             </label>
                             <input
-                                className="form-control w-full sm:w-7/12"
+                                className="form-control sm:w-96"
                                 id="fullname"
                                 name="fullname"
                                 type="text"
@@ -54,8 +54,8 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 onChange={updatePersonal}
                             />
                         </div>
-                        <div className="sm:flex">
-                            <div className="form-field mt-4 sm:mr-2.5">
+                        <div className="md:flex">
+                            <div className="form-field mt-4 md:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="dob">
                                     Date of Birth
                                 </label>
@@ -68,12 +68,12 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                     onChange={updatePersonal}
                                 />
                             </div>
-                            <div className="form-field mt-4 flex-1 sm:ml-2.5">
+                            <div className="form-field mt-4 md:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="pob">
                                     Place of Birth
                                 </label>
                                 <input
-                                    className="form-control sm:w-full lg:w-4/6 xl:w-7/12"
+                                    className="form-control md:w-full lg:w-64"
                                     placeholder="City, Country"
                                     id="pob"
                                     type="text"
@@ -88,7 +88,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 Nationality
                             </label>
                             <input
-                                className="form-control w-full sm:w-5/12"
+                                className="form-control w-64"
                                 type="text"
                                 id="nation"
                                 name="nation"
@@ -112,7 +112,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                     Marital Status
                                 </label>
                                 <input
-                                    className="form-control"
+                                    className="form-control sm:w-full md:w-56"
                                     type="text"
                                     id="marital"
                                     name="marital"
@@ -126,7 +126,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 Father's Name
                             </label>
                             <input
-                                className="form-control w-full sm:w-7/12"
+                                className="form-control w-96"
                                 type="text"
                                 id="father"
                                 name="father"
@@ -138,8 +138,8 @@ function PersonalDetails({ nextform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label">Current Contact Information</h3>
-                    <div className="form-card">
+                    <h3 className="section-label pr-2">Current Contact Information</h3>
+                    <div className="form-card rounded-xl sm:rounded-none">
                         <div className="sm:flex">
                             <div className="form-field flex-1 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="mob">
@@ -168,7 +168,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 />
                             </div>
                         </div>
-                        <div className="sm:flex">
+                        <div className="sm:flex items-end">
                             <div className="form-field mt-4 flex-1 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="pemail">
                                     Primary Email Address
@@ -213,14 +213,14 @@ function PersonalDetails({ nextform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label">Teaching/Research Interests</h3>
-                    <div className="form-card rounded-br-xl rounded-bl-xl">
+                    <h3 className="section-label pr-2">Teaching/Research Interests</h3>
+                    <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="resspec">
                                 Your Research Specialization
                             </label>
                             <input
-                                className="form-control w-full sm:w-1/2"
+                                className="form-control w-96"
                                 type="text"
                                 id="resspec"
                                 name="resspec"

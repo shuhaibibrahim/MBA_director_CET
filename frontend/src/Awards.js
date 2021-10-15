@@ -245,586 +245,634 @@ function Awards({ nextform, prevform, details, setDetails }) {
     }, [details]);
 
     return (
-        <div>
-            <form>
-                <h3 className="font-bold my-5 text-xl text-red-700">Awards, Thesis & R&D</h3>
-                <h2 className="font-bold my-3">
-                    Honours, Awards etc.(Please provide these details if it is relevant to you)
-                </h2>
-                <div className="transition duration-500 ease-in-out">
-                    {renderAward}
+        <div className="w-9/12 mx-auto my-6">
+            <h2 className="font-bold text-3xl text-secondary">Awards, Thesis and R&D</h2>
+            <hr className="my-4" />
 
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Award Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={award.title}
-                                onChange={(e) => {
-                                    setAward({ ...award, title: e.target.value });
-                                }}
-                            />
+            <form className="my-7">
+                <div className="sm:flex justify-between">
+                    <h3 className="section-label pr-2">
+                        Honours, Awards etc. (Please provide these details if it is relevant to you)
+                    </h3>
+                    <div className="form-card rounded-tl-xl rounded-tr-xl">
+                        <div className="transition duration-500 ease-in-out">
+                            {renderAward}
+
+                            <div className="grid gap-3 mb-7">
+                                <div className="form-field">
+                                    <label htmlFor="title">Award Title</label>
+                                    <input
+                                        type="text"
+                                        id="title"
+                                        name="title"
+                                        value={award.title}
+                                        onChange={(e) => {
+                                            setAward({ ...award, title: e.target.value });
+                                        }}
+                                    />
+                                </div>
+                                <div className="form-field">
+                                    <label htmlFor="org">Organization</label>
+                                    <input
+                                        type="text"
+                                        id="org"
+                                        name="org"
+                                        value={award.org}
+                                        onChange={(e) => {
+                                            setAward({ ...award, org: e.target.value });
+                                        }}
+                                    />
+                                </div>
+                                <div className="form-field">
+                                    <label htmlFor="year">Year of Award</label>
+                                    <input
+                                        type="text"
+                                        id="year"
+                                        name="year"
+                                        value={award.year}
+                                        onChange={(e) => {
+                                            setAward({ ...award, year: e.target.value });
+                                        }}
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <div className="form-field">
-                            <label htmlFor="org">Organization</label>
-                            <input
-                                type="text"
-                                id="org"
-                                name="org"
-                                value={award.org}
-                                onChange={(e) => {
-                                    setAward({ ...award, org: e.target.value });
+
+                        <div className="text-center">
+                            <button
+                                onClick={(e) => {
+                                    addToList(e, "awards", award);
+                                    setAward({ title: "", org: "", year: "", id: 0 });
                                 }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="year">Year of Award</label>
-                            <input
-                                type="text"
-                                id="year"
-                                name="year"
-                                value={award.year}
-                                onChange={(e) => {
-                                    setAward({ ...award, year: e.target.value });
-                                }}
-                            />
+                                className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                            >
+                                Add to list
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "awards", award);
-                            setAward({ title: "", org: "", year: "", id: 0 });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to list
-                    </button>
-                </div>
-
-                <h2 className="font-bold my-3">Details of PhD/MTech/MPhil thesis supervised</h2>
-                <h2 className="font-bold text-sm my-3">Details of PhD thesis supervised (completed only)</h2>
-                <div>
-                    <label htmlFor="singlySupervisedThesis">
-                        No. of Ph.D. thesis supervised singly (defended successfully)
-                    </label>
-                    <input
-                        className="w-20 ml-5"
-                        id="singlySupervisedThesis"
-                        name="singlySupervisedThesis"
-                        value={details.singlySupervisedThesis}
-                        onChange={update}
-                        type="text"
-                    />
-                </div>
-                <div>
-                    <label htmlFor="jointlySupervisedThesis">
-                        No. of Ph.D. thesis supervised jointly (defended successfully)
-                    </label>
-                    <input
-                        className="w-20 ml-5"
-                        id="jointlySupervisedThesis"
-                        name="jointlySupervisedThesis"
-                        value={details.jointlySupervisedThesis}
-                        onChange={update}
-                        type="text"
-                    />
-                </div>
-                <div className="mt-2">
-                    {renderThesis}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="studentname">Student Name</label>
-                            <input
-                                type="text"
-                                id="studentname"
-                                name="studentname"
-                                value={thesis.studentname}
-                                onChange={(e) => {
-                                    setThesis({ ...thesis, studentname: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="title">Thesis Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={thesis.title}
-                                onChange={(e) => {
-                                    setThesis({ ...thesis, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="supervisor">Supervisor</label>
-                            <input
-                                type="text"
-                                id="supervisor"
-                                name="supervisor"
-                                value={thesis.supervisor}
-                                onChange={(e) => {
-                                    setThesis({ ...thesis, supervisor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="year">Year Successfully Defended</label>
-                            <input
-                                type="text"
-                                id="year"
-                                name="year"
-                                value={thesis.year}
-                                onChange={(e) => {
-                                    setThesis({ ...thesis, year: e.target.value });
-                                }}
-                            />
+                <div className="sm:flex justify-between">
+                    <h3 className="section-label pr-2">Details of PhD/MTech/MPhil thesis supervised</h3>
+                    <h2 className="font-bold text-sm my-3">Details of PhD thesis supervised (completed only)</h2>
+                    <div>
+                        <label htmlFor="singlySupervisedThesis">
+                            No. of Ph.D. thesis supervised singly (defended successfully)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            id="singlySupervisedThesis"
+                            name="singlySupervisedThesis"
+                            value={details.singlySupervisedThesis}
+                            onChange={update}
+                            type="text"
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="jointlySupervisedThesis">
+                            No. of Ph.D. thesis supervised jointly (defended successfully)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            id="jointlySupervisedThesis"
+                            name="jointlySupervisedThesis"
+                            value={details.jointlySupervisedThesis}
+                            onChange={update}
+                            type="text"
+                        />
+                    </div>
+                    <div className="mt-2">
+                        {renderThesis}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="studentname">Student Name</label>
+                                <input
+                                    type="text"
+                                    id="studentname"
+                                    name="studentname"
+                                    value={thesis.studentname}
+                                    onChange={(e) => {
+                                        setThesis({ ...thesis, studentname: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="title">Thesis Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={thesis.title}
+                                    onChange={(e) => {
+                                        setThesis({ ...thesis, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="supervisor">Supervisor</label>
+                                <input
+                                    type="text"
+                                    id="supervisor"
+                                    name="supervisor"
+                                    value={thesis.supervisor}
+                                    onChange={(e) => {
+                                        setThesis({ ...thesis, supervisor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="year">Year Successfully Defended</label>
+                                <input
+                                    type="text"
+                                    id="year"
+                                    name="year"
+                                    value={thesis.year}
+                                    onChange={(e) => {
+                                        setThesis({ ...thesis, year: e.target.value });
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "thesis", thesis);
-                            setThesis({
-                                studentname: "",
-                                title: "",
-                                supervisor: "",
-                                year: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
-                </div>
-
-                <h2 className="font-bold text-sm my-3">M.Tech, MPhil, MTech, MBA thesis supervised (completed only)</h2>
-                <div>
-                    <label htmlFor="">
-                        No.of MTech/M.Phil/ MBA thesis supervised (completed and defended successfully)
-                    </label>
-                    <input
-                        className="w-20 ml-5"
-                        type="text"
-                        id="thesisSupervised"
-                        name="thesisSupervised"
-                        onChange={update}
-                    />
-                </div>
-                <h2 className="font-bold text-sm my-3">
-                    Details of Industry or Government Sponsored R&D/Consulting projects (Please provide these details if
-                    it is relevant to you)
-                </h2>
-                <h2 className="font-bold text-sm my-3">
-                    Details of sponsored R&D projects (completed, and as Principal Investigator)
-                </h2>
-                <div>
-                    <label htmlFor="">
-                        No.of sponsored R&D projects (completed), with you as "Principal Investigator"(where each
-                        project is over Rs. 2lakhs)
-                    </label>
-                    <input className="w-20 ml-5" type="text" id="sponsoredRD1" name="sponsoredRD1" onChange={update} />
-                </div>
-                <div className="mt-3">
-                    {renderProjects1}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={projects1.title}
-                                onChange={(e) => {
-                                    setProjects1({ ...projects1, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="sponsor">Sponsor</label>
-                            <input
-                                type="text"
-                                id="sponsor"
-                                name="sponsor"
-                                value={projects1.sponsor}
-                                onChange={(e) => {
-                                    setProjects1({ ...projects1, sponsor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="years">Duration (Years)</label>
-                            <input
-                                type="text"
-                                id="years"
-                                name="years"
-                                value={projects1.years}
-                                onChange={(e) => {
-                                    setProjects1({ ...projects1, years: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="amount">Grant Amount in Rs.</label>
-                            <input
-                                type="text"
-                                id="amount"
-                                name="amount"
-                                value={projects1.amount}
-                                onChange={(e) => {
-                                    setProjects1({ ...projects1, amount: e.target.value });
-                                }}
-                            />
-                        </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "thesis", thesis);
+                                setThesis({
+                                    studentname: "",
+                                    title: "",
+                                    supervisor: "",
+                                    year: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
                     </div>
                 </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "projects1", projects1);
-                            setProjects1({
-                                title: "",
-                                sponsor: "",
-                                years: "",
-                                amount: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
-                </div>
 
-                <h2 className="font-bold text-sm my-3">
-                    Details of sponsored R&D projects (in-progress and as Principal Investigator)
-                </h2>
-                <div>
-                    <label htmlFor="">
-                        No.of sponsored R&D projects(in-progress),with you as "Principal Investigator"(where each
-                        project is over Rs. 2lakhs)
-                    </label>
-                    <input className="w-20 ml-5" type="text" id="sponsoredRD2" name="sponsoredRD2" onChange={update} />
-                </div>
-                <div className="mt-3">
-                    {renderProjects2}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={projects2.title}
-                                onChange={(e) => {
-                                    setProjects2({ ...projects2, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="sponsor">Sponsor</label>
-                            <input
-                                type="text"
-                                id="sponsor"
-                                name="sponsor"
-                                value={projects2.sponsor}
-                                onChange={(e) => {
-                                    setProjects2({ ...projects2, sponsor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="years">Duration (Years)</label>
-                            <input
-                                type="text"
-                                id="years"
-                                name="years"
-                                value={projects2.years}
-                                onChange={(e) => {
-                                    setProjects2({ ...projects2, years: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="amount">Grant Amount in Rs.</label>
-                            <input
-                                type="text"
-                                id="amount"
-                                name="amount"
-                                value={projects2.amount}
-                                onChange={(e) => {
-                                    setProjects2({ ...projects2, amount: e.target.value });
-                                }}
-                            />
+                <div className="sm:flex justify-between">
+                    <h2 className="font-bold text-sm my-3">
+                        M.Tech, MPhil, MTech, MBA thesis supervised (completed only)
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of MTech/M.Phil/ MBA thesis supervised (completed and defended successfully)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="thesisSupervised"
+                            name="thesisSupervised"
+                            onChange={update}
+                        />
+                    </div>
+                    <h2 className="font-bold text-sm my-3">
+                        Details of Industry or Government Sponsored R&D/Consulting projects (Please provide these
+                        details if it is relevant to you)
+                    </h2>
+                    <h2 className="font-bold text-sm my-3">
+                        Details of sponsored R&D projects (completed, and as Principal Investigator)
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of sponsored R&D projects (completed), with you as "Principal Investigator"(where each
+                            project is over Rs. 2lakhs)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="sponsoredRD1"
+                            name="sponsoredRD1"
+                            onChange={update}
+                        />
+                    </div>
+                    <div className="mt-3">
+                        {renderProjects1}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="title">Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={projects1.title}
+                                    onChange={(e) => {
+                                        setProjects1({ ...projects1, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="sponsor">Sponsor</label>
+                                <input
+                                    type="text"
+                                    id="sponsor"
+                                    name="sponsor"
+                                    value={projects1.sponsor}
+                                    onChange={(e) => {
+                                        setProjects1({ ...projects1, sponsor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="years">Duration (Years)</label>
+                                <input
+                                    type="text"
+                                    id="years"
+                                    name="years"
+                                    value={projects1.years}
+                                    onChange={(e) => {
+                                        setProjects1({ ...projects1, years: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="amount">Grant Amount in Rs.</label>
+                                <input
+                                    type="text"
+                                    id="amount"
+                                    name="amount"
+                                    value={projects1.amount}
+                                    onChange={(e) => {
+                                        setProjects1({ ...projects1, amount: e.target.value });
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "projects2", projects2);
-                            setProjects2({
-                                title: "",
-                                sponsor: "",
-                                years: "",
-                                amount: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
-                </div>
-
-                <h2 className="font-bold text-sm my-3">
-                    Details of sponsored R&D projects (Completed and as Co-Principal Investigator)
-                </h2>
-                <div>
-                    <label htmlFor="">
-                        No.of sponsored R&D projects (completed),with you as "Co-Principal Investigator"(where each
-                        project isover Rs.2lakhs)
-                    </label>
-                    <input className="w-20 ml-5" type="text" id="sponsoredRD3" name="sponsoredRD3" onChange={update} />
-                </div>
-                <div className="mt-3">
-                    {renderProjects3}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={projects3.title}
-                                onChange={(e) => {
-                                    setProjects3({ ...projects3, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="sponsor">Sponsor</label>
-                            <input
-                                type="text"
-                                id="sponsor"
-                                name="sponsor"
-                                value={projects3.sponsor}
-                                onChange={(e) => {
-                                    setProjects3({ ...projects3, sponsor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="years">Duration (Years)</label>
-                            <input
-                                type="text"
-                                id="years"
-                                name="years"
-                                value={projects3.years}
-                                onChange={(e) => {
-                                    setProjects3({ ...projects3, years: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="amount">Grant Amount in Rs.</label>
-                            <input
-                                type="text"
-                                id="amount"
-                                name="amount"
-                                value={projects3.amount}
-                                onChange={(e) => {
-                                    setProjects3({ ...projects3, amount: e.target.value });
-                                }}
-                            />
-                        </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "projects1", projects1);
+                                setProjects1({
+                                    title: "",
+                                    sponsor: "",
+                                    years: "",
+                                    amount: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
                     </div>
                 </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "projects3", projects3);
-                            setProjects3({
-                                title: "",
-                                sponsor: "",
-                                years: "",
-                                amount: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
-                </div>
 
-                <h2 className="font-bold text-sm my-3">
-                    Details of sponsored R&D projects (in-progress and as Co-Principal Investigator)
-                </h2>
-                <div>
-                    <label htmlFor="">
-                        No.of sponsored R&D projects (in-progress),with you as"Co-Principal Investigator" (where each
-                        project is over Rs.2lakhs)
-                    </label>
-                    <input className="w-20 ml-5" type="text" id="sponsoredRD4" name="sponsoredRD4" onChange={update} />
-                </div>
-                <div className="mt-3">
-                    {renderProjects4}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={projects4.title}
-                                onChange={(e) => {
-                                    setProjects4({ ...projects4, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="sponsor">Sponsor</label>
-                            <input
-                                type="text"
-                                id="sponsor"
-                                name="sponsor"
-                                value={projects4.sponsor}
-                                onChange={(e) => {
-                                    setProjects4({ ...projects4, sponsor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="years">Duration (Years)</label>
-                            <input
-                                type="text"
-                                id="years"
-                                name="years"
-                                value={projects4.years}
-                                onChange={(e) => {
-                                    setProjects4({ ...projects4, years: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="amount">Grant Amount in Rs.</label>
-                            <input
-                                type="text"
-                                id="amount"
-                                name="amount"
-                                value={projects4.amount}
-                                onChange={(e) => {
-                                    setProjects4({ ...projects4, amount: e.target.value });
-                                }}
-                            />
+                <div className="sm:flex justify-between">
+                    <h2 className="font-bold text-sm my-3">
+                        Details of sponsored R&D projects (in-progress and as Principal Investigator)
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of sponsored R&D projects(in-progress),with you as "Principal Investigator"(where each
+                            project is over Rs. 2lakhs)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="sponsoredRD2"
+                            name="sponsoredRD2"
+                            onChange={update}
+                        />
+                    </div>
+                    <div className="mt-3">
+                        {renderProjects2}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="title">Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={projects2.title}
+                                    onChange={(e) => {
+                                        setProjects2({ ...projects2, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="sponsor">Sponsor</label>
+                                <input
+                                    type="text"
+                                    id="sponsor"
+                                    name="sponsor"
+                                    value={projects2.sponsor}
+                                    onChange={(e) => {
+                                        setProjects2({ ...projects2, sponsor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="years">Duration (Years)</label>
+                                <input
+                                    type="text"
+                                    id="years"
+                                    name="years"
+                                    value={projects2.years}
+                                    onChange={(e) => {
+                                        setProjects2({ ...projects2, years: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="amount">Grant Amount in Rs.</label>
+                                <input
+                                    type="text"
+                                    id="amount"
+                                    name="amount"
+                                    value={projects2.amount}
+                                    onChange={(e) => {
+                                        setProjects2({ ...projects2, amount: e.target.value });
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "projects4", projects4);
-                            setProjects4({
-                                title: "",
-                                sponsor: "",
-                                years: "",
-                                amount: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
-                </div>
-
-                <h2 className="font-bold text-sm my-3">
-                    Details of industry-or government-sponsored consulting assignments completed
-                </h2>
-                <div>
-                    <label htmlFor="">
-                        No.of sponsored consulting projects completed, with you as "Chief Investigator" (where each
-                        project is over Rs.0.50lakhs)
-                    </label>
-                    <input className="w-20 ml-5" type="text" id="sponsoredRD5" name="sponsoredRD5" onChange={update} />
-                </div>
-                <div className="mt-3">
-                    {renderProjects5}
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="title">Title</label>
-                            <input
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={projects5.title}
-                                onChange={(e) => {
-                                    setProjects5({ ...projects5, title: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="sponsor">Sponsor</label>
-                            <input
-                                type="text"
-                                id="sponsor"
-                                name="sponsor"
-                                value={projects5.sponsor}
-                                onChange={(e) => {
-                                    setProjects5({ ...projects5, sponsor: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="years">Duration (Years)</label>
-                            <input
-                                type="text"
-                                id="years"
-                                name="years"
-                                value={projects5.years}
-                                onChange={(e) => {
-                                    setProjects5({ ...projects5, years: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="amount">Grant Amount in Rs.</label>
-                            <input
-                                type="text"
-                                id="amount"
-                                name="amount"
-                                value={projects5.amount}
-                                onChange={(e) => {
-                                    setProjects5({ ...projects5, amount: e.target.value });
-                                }}
-                            />
-                        </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "projects2", projects2);
+                                setProjects2({
+                                    title: "",
+                                    sponsor: "",
+                                    years: "",
+                                    amount: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
                     </div>
                 </div>
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "projects5", projects5);
-                            setProjects5({
-                                title: "",
-                                sponsor: "",
-                                years: "",
-                                amount: "",
-                                id: 0,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to List
-                    </button>
+
+                <div className="sm:flex justify-between">
+                    <h2 className="font-bold text-sm my-3">
+                        Details of sponsored R&D projects (Completed and as Co-Principal Investigator)
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of sponsored R&D projects (completed),with you as "Co-Principal Investigator"(where each
+                            project isover Rs.2lakhs)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="sponsoredRD3"
+                            name="sponsoredRD3"
+                            onChange={update}
+                        />
+                    </div>
+                    <div className="mt-3">
+                        {renderProjects3}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="title">Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={projects3.title}
+                                    onChange={(e) => {
+                                        setProjects3({ ...projects3, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="sponsor">Sponsor</label>
+                                <input
+                                    type="text"
+                                    id="sponsor"
+                                    name="sponsor"
+                                    value={projects3.sponsor}
+                                    onChange={(e) => {
+                                        setProjects3({ ...projects3, sponsor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="years">Duration (Years)</label>
+                                <input
+                                    type="text"
+                                    id="years"
+                                    name="years"
+                                    value={projects3.years}
+                                    onChange={(e) => {
+                                        setProjects3({ ...projects3, years: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="amount">Grant Amount in Rs.</label>
+                                <input
+                                    type="text"
+                                    id="amount"
+                                    name="amount"
+                                    value={projects3.amount}
+                                    onChange={(e) => {
+                                        setProjects3({ ...projects3, amount: e.target.value });
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "projects3", projects3);
+                                setProjects3({
+                                    title: "",
+                                    sponsor: "",
+                                    years: "",
+                                    amount: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
+                    </div>
+                </div>
+
+                <div className="sm:flex justify-between">
+                    <h2 className="font-bold text-sm my-3">
+                        Details of sponsored R&D projects (in-progress and as Co-Principal Investigator)
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of sponsored R&D projects (in-progress),with you as"Co-Principal Investigator" (where
+                            each project is over Rs.2lakhs)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="sponsoredRD4"
+                            name="sponsoredRD4"
+                            onChange={update}
+                        />
+                    </div>
+                    <div className="mt-3">
+                        {renderProjects4}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="title">Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={projects4.title}
+                                    onChange={(e) => {
+                                        setProjects4({ ...projects4, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="sponsor">Sponsor</label>
+                                <input
+                                    type="text"
+                                    id="sponsor"
+                                    name="sponsor"
+                                    value={projects4.sponsor}
+                                    onChange={(e) => {
+                                        setProjects4({ ...projects4, sponsor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="years">Duration (Years)</label>
+                                <input
+                                    type="text"
+                                    id="years"
+                                    name="years"
+                                    value={projects4.years}
+                                    onChange={(e) => {
+                                        setProjects4({ ...projects4, years: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="amount">Grant Amount in Rs.</label>
+                                <input
+                                    type="text"
+                                    id="amount"
+                                    name="amount"
+                                    value={projects4.amount}
+                                    onChange={(e) => {
+                                        setProjects4({ ...projects4, amount: e.target.value });
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "projects4", projects4);
+                                setProjects4({
+                                    title: "",
+                                    sponsor: "",
+                                    years: "",
+                                    amount: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
+                    </div>
+
+                    <h2 className="font-bold text-sm my-3">
+                        Details of industry-or government-sponsored consulting assignments completed
+                    </h2>
+                    <div>
+                        <label htmlFor="">
+                            No.of sponsored consulting projects completed, with you as "Chief Investigator" (where each
+                            project is over Rs.0.50lakhs)
+                        </label>
+                        <input
+                            className="w-20 ml-5"
+                            type="text"
+                            id="sponsoredRD5"
+                            name="sponsoredRD5"
+                            onChange={update}
+                        />
+                    </div>
+                    <div className="mt-3">
+                        {renderProjects5}
+                        <div className="grid gap-3 mb-7">
+                            <div className="form-field">
+                                <label htmlFor="title">Title</label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={projects5.title}
+                                    onChange={(e) => {
+                                        setProjects5({ ...projects5, title: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="sponsor">Sponsor</label>
+                                <input
+                                    type="text"
+                                    id="sponsor"
+                                    name="sponsor"
+                                    value={projects5.sponsor}
+                                    onChange={(e) => {
+                                        setProjects5({ ...projects5, sponsor: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="years">Duration (Years)</label>
+                                <input
+                                    type="text"
+                                    id="years"
+                                    name="years"
+                                    value={projects5.years}
+                                    onChange={(e) => {
+                                        setProjects5({ ...projects5, years: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field">
+                                <label htmlFor="amount">Grant Amount in Rs.</label>
+                                <input
+                                    type="text"
+                                    id="amount"
+                                    name="amount"
+                                    value={projects5.amount}
+                                    onChange={(e) => {
+                                        setProjects5({ ...projects5, amount: e.target.value });
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-center">
+                        <button
+                            onClick={(e) => {
+                                addToList(e, "projects5", projects5);
+                                setProjects5({
+                                    title: "",
+                                    sponsor: "",
+                                    years: "",
+                                    amount: "",
+                                    id: 0,
+                                });
+                            }}
+                            className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                        >
+                            Add to List
+                        </button>
+                    </div>
                 </div>
 
                 <div className="flex items-center justify-between">

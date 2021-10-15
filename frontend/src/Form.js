@@ -139,7 +139,7 @@ export default function Form({ user, logout }) {
 
     return (
         <>
-            <h1 className="text-3xl text-gray-700 mt-8 text-center">Application for MBA Director</h1>
+            <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
             {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} />}
             {formno === 2 && (
                 <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
