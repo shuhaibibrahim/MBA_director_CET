@@ -10,3 +10,11 @@
 .flex-75 {
     flex: 0.75 1 0%;
 }
+
+.w-table {
+    min-width: 30rem;
+}
+
+.w-rem {
+    min-width: 3.1rem;
+}
