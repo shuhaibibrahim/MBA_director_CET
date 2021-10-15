@@ -54,13 +54,13 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 onChange={updatePersonal}
                             />
                         </div>
-                        <div className="md:flex">
-                            <div className="form-field mt-4 md:mr-2.5">
+                        <div className="sm:flex items-end">
+                            <div className="form-field sm:w-4/12 mt-4 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="dob">
                                     Date of Birth
                                 </label>
                                 <input
-                                    className="form-control"
+                                    className="form-control sm:w-full"
                                     id="dob"
                                     name="dob"
                                     type="date"
@@ -68,12 +68,12 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                     onChange={updatePersonal}
                                 />
                             </div>
-                            <div className="form-field mt-4 md:ml-2.5">
+                            <div className="form-field sm:w-8/12 lg:w-5/12 mt-4 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="pob">
                                     Place of Birth
                                 </label>
                                 <input
-                                    className="form-control md:w-full lg:w-64"
+                                    className="form-control sm:w-full"
                                     placeholder="City, Country"
                                     id="pob"
                                     type="text"
