@@ -91,22 +91,39 @@ function Awards({ nextform, prevform, details, setDetails }) {
     useEffect(() => {
         setRenderAward(
             details.awards.map((item) => (
-                <div key={item.id} className="flex items-center border-2 border-black mb-2 justify-between">
-                    <div className="flex flex-col">
-                        <div>Award Title: {item.title}</div>
-                        <div>Organization: {item.org}</div>
-                        <div>Year of Award: {item.year}</div>
-                    </div>
+                <>
+                    <tr key={item.id}>
+                        <td className="px-6 py-4 truncate">{item.title}</td>
+                        <td className="px-6 py-4 whitespace-nowrap">{item.org}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.year}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <button
+                                onClick={(e) => {
+                                    removeItem(e, "awards", item.id);
+                                }}
+                                className="text-secondary hover:text-secondary-dark transition"
+                            >
+                                Remove
+                            </button>
+                        </td>
+                    </tr>
+                    {/* <div key={item.id} className="flex items-center border-2 border-black mb-2 justify-between">
+                        <div className="flex flex-col">
+                            <div>Award Title: {item.title}</div>
+                            <div>Organization: {item.org}</div>
+                            <div>Year of Award: {item.year}</div>
+                        </div>
 
-                    <button
-                        className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
-                        onClick={(e) => {
-                            removeItem(e, "awards", item.id);
-                        }}
-                    >
-                        Remove
-                    </button>
-                </div>
+                        <button
+                            className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
+                            onClick={(e) => {
+                                removeItem(e, "awards", item.id);
+                            }}
+                        >
+                            Remove
+                        </button>
+                    </div> */}
+                </>
             ))
         );
 
@@ -254,61 +271,102 @@ function Awards({ nextform, prevform, details, setDetails }) {
                     <h3 className="section-label pr-2">
                         Honours, Awards etc. (Please provide these details if it is relevant to you)
                     </h3>
-                    <div className="form-card rounded-tl-xl rounded-tr-xl">
-                        <div className="transition duration-500 ease-in-out">
-                            {renderAward}
 
-                            <div className="grid gap-3 mb-7">
-                                <div className="form-field">
-                                    <label htmlFor="title">Award Title</label>
-                                    <input
-                                        type="text"
-                                        id="title"
-                                        name="title"
-                                        value={award.title}
-                                        onChange={(e) => {
-                                            setAward({ ...award, title: e.target.value });
-                                        }}
-                                    />
-                                </div>
-                                <div className="form-field">
-                                    <label htmlFor="org">Organization</label>
-                                    <input
-                                        type="text"
-                                        id="org"
-                                        name="org"
-                                        value={award.org}
-                                        onChange={(e) => {
-                                            setAward({ ...award, org: e.target.value });
-                                        }}
-                                    />
-                                </div>
-                                <div className="form-field">
-                                    <label htmlFor="year">Year of Award</label>
-                                    <input
-                                        type="text"
-                                        id="year"
-                                        name="year"
-                                        value={award.year}
-                                        onChange={(e) => {
-                                            setAward({ ...award, year: e.target.value });
-                                        }}
-                                    />
-                                </div>
+                    {/* <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none"> */}
+                    <div className="form-card rounded-xl">
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="title">
+                                Award Title
+                            </label>
+                            <input
+                                className="form-control sm:w-96"
+                                type="text"
+                                id="title"
+                                name="title"
+                                value={award.title}
+                                onChange={(e) => {
+                                    setAward({ ...award, title: e.target.value });
+                                }}
+                            />
+                        </div>
+
+                        <div className="sm:flex items-end">
+                            <div className="form-field mt-4 sm:w-6/12 md:w-7/12 lg:w-8/12 xl:w-9/12 sm:mr-2.5">
+                                <label className="form-label mb-1" htmlFor="org">
+                                    Organization
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="org"
+                                    name="org"
+                                    value={award.org}
+                                    onChange={(e) => {
+                                        setAward({ ...award, org: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field mt-4 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 sm:ml-2.5">
+                                <label className="form-label mb-1" htmlFor="year">
+                                    Year of Award
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="year"
+                                    name="year"
+                                    value={award.year}
+                                    onChange={(e) => {
+                                        setAward({ ...award, year: e.target.value });
+                                    }}
+                                />
                             </div>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-right mt-5">
                             <button
                                 onClick={(e) => {
                                     addToList(e, "awards", award);
                                     setAward({ title: "", org: "", year: "", id: 0 });
                                 }}
-                                className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
+                                className="btn"
                             >
                                 Add to list
                             </button>
                         </div>
+                        {details.awards.length !== 0 ? (
+                            <table className="w-full divide-y divide-gray-200 mt-5">
+                                <thead className="bg-gray-100">
+                                    <tr>
+                                        <th
+                                            scope="col"
+                                            className="w-4/12 px-6 py-3 text-left text-xs font-medium text-gray-600"
+                                        >
+                                            Award Title
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="w-4/12 px-6 py-3 text-left text-xs font-medium text-gray-600"
+                                        >
+                                            Organization
+                                        </th>
+
+                                        <th
+                                            scope="col"
+                                            className="w-2/12 px-6 py-3 text-left text-xs font-medium text-gray-600"
+                                        >
+                                            Year
+                                        </th>
+                                        <th scope="col" className="w-2/12 px-6 py-3">
+                                            <span className="sr-only">Remove</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className="bg-white divide-y divide-gray-200">{renderAward}</tbody>
+                            </table>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
@@ -875,11 +933,11 @@ function Awards({ nextform, prevform, details, setDetails }) {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between">
-                    <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                <div className="flex items-center justify-between mt-6">
+                    <button onClick={goPrev} className="btn-secondary">
                         Prev
                     </button>
-                    <button onClick={saveInfoNext} className="bg-green-700 text-white w-20 my-5 p-1 rounded">
+                    <button onClick={saveInfoNext} className="btn">
                         Next
                     </button>
                 </div>
