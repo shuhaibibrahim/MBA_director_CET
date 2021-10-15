@@ -34,7 +34,7 @@ export default function App() {
                     <div className="w-64">
                         <TitleSVG />
                     </div>
-                    {onBoarding ? (
+                    {onBoarding && !user? (
                         <div>
                             <button
                                 onClick={() => {
