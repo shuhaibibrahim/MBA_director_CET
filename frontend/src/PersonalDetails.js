@@ -73,7 +73,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                     Place of Birth
                                 </label>
                                 <input
-                                    className="form-control sm:w-full"
+                                    className="form-control w-full"
                                     placeholder="City, Country"
                                     id="pob"
                                     type="text"
@@ -154,7 +154,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                     onChange={updatePersonal}
                                 />
                             </div>
-                            <div className="form-field flex-1 sm:ml-2.5">
+                            <div className="form-field flex-1 mt-4 sm:mt-0 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="phone">
                                     Phone Number
                                 </label>

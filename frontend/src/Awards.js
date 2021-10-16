@@ -313,7 +313,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.awards.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Award Title
                                     </div>
@@ -328,7 +328,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">{renderAward}</div>
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">{renderAward}</div>
                             </div>
                         ) : (
                             <></>
@@ -458,7 +458,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
 
                         {details.thesis.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Student Name
                                     </div>
@@ -476,7 +476,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">{renderThesis}</div>
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">{renderThesis}</div>
                             </div>
                         ) : (
                             <></>
@@ -616,7 +616,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.projects1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -634,7 +634,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">
                                     {renderProjects1}
                                 </div>
                             </div>
@@ -750,7 +750,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.projects2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -768,7 +768,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">
                                     {renderProjects2}
                                 </div>
                             </div>
@@ -884,7 +884,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.projects3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -902,7 +902,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">
                                     {renderProjects3}
                                 </div>
                             </div>
@@ -1018,7 +1018,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.projects4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -1036,7 +1036,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">
                                     {renderProjects4}
                                 </div>
                             </div>
@@ -1151,7 +1151,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.projects5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 w-table bg-gray-100 flex">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -1169,7 +1169,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 w-table bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-120 bg-white divide-y divide-gray-200">
                                     {renderProjects5}
                                 </div>
                             </div>

@@ -11,8 +11,16 @@
     flex: 0.75 1 0%;
 }
 
-.w-table {
+.min-w-120 {
     min-width: 30rem;
+}
+
+.min-w-160 {
+    min-width: 40rem;
+}
+
+.min-w-200 {
+    min-width: 50rem;
 }
 
 .w-rem {
