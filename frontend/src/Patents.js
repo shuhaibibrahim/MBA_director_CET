@@ -61,14 +61,14 @@ function Patents({ nextform, prevform, details, setDetails }) {
         setRenderPatent(
             details.patents.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coInventors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.patentNumber}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.patentAuthority}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coInventors}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.patentNumber}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.patentAuthority}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">
                         {item.organizationAssignedTo}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.datePublished}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.datePublished}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -86,14 +86,14 @@ function Patents({ nextform, prevform, details, setDetails }) {
         setRenderFiledPatents(
             details.filedPatents.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coInventors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.patentNumber}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.patentAuthority}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coInventors}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.patentNumber}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.patentAuthority}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">
                         {item.organizationAssignedTo}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.datePublished}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.datePublished}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -126,7 +126,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPatents"
                                 name="noPatents"
                                 onChange={update}
@@ -257,7 +257,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.patents.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -298,7 +298,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noFiledPatents"
                                 name="noFiledPatents"
                                 onChange={update}
@@ -429,7 +429,7 @@ function Patents({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.filedPatents.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title

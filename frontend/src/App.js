@@ -69,8 +69,8 @@ export default function App() {
                     )}
                 </div>
             </header>
-            {/* <Form user={user} logout={logout} /> */}
-            {user ? (
+            <Form user={user} logout={logout} />
+            {/* {user ? (
                 <Form user={user} logout={logout} />
             ) : (
                 <Login
@@ -80,7 +80,7 @@ export default function App() {
                     hasAccount={hasAccount}
                     setHasAccount={setHasAccount}
                 />
-            )}
+            )} */}
         </div>
     );
 }

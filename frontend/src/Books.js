@@ -70,11 +70,11 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderBooks(
             details.books.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.publisher}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.edition}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.edition}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -92,11 +92,11 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderPublications1(
             details.publications1.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.publisher}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.edition}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.edition}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -114,14 +114,14 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderPublications2(
             details.publications2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.journalname}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.publisher}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.volumeno}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.date}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.indexedin}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.journalname}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.volumeno}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.indexedin}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -139,13 +139,13 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderPublications3(
             details.publications3.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.journalname}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.publisher}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.volumeno}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.journalname}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.volumeno}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -163,12 +163,12 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderPublications4(
             details.publications4.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.conferencename}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.location}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.month}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.conferencename}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.location}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.month}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -186,12 +186,12 @@ function Books({ nextform, prevform, details, setDetails }) {
         setRenderPublications5(
             details.publications5.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.conferencename}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.location}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.month}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.conferencename}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.location}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.month}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -260,7 +260,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noBooks"
                                 name="noBooks"
                                 onChange={update}
@@ -374,7 +374,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.books.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -413,7 +413,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPublished1"
                                 name="noPublished1"
                                 onChange={update}
@@ -537,7 +537,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.publications1.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -578,7 +578,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPublished2"
                                 name="noPublished2"
                                 onChange={update}
@@ -760,7 +760,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.publications2.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -810,7 +810,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPublished3"
                                 name="noPublished3"
                                 onChange={update}
@@ -972,7 +972,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.publications3.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -1019,7 +1019,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPublished4"
                                 name="noPublished4"
                                 onChange={update}
@@ -1179,7 +1179,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.publications4.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -1227,7 +1227,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="noPublished5"
                                 name="noPublished5"
                                 onChange={update}
@@ -1387,7 +1387,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.publications5.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title

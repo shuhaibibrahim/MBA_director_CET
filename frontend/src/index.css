@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .form-control {
-    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary max-w-full transition;
+    @apply border border-gray-300 text-gray-900 rounded-md px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary max-w-full transition;
 }
 
 .form-label {
@@ -35,17 +35,17 @@
 }
 
 .review-section h4 {
-    @apply text-tertiary text-lg font-bold mt-4;
+    @apply text-tertiary text-lg font-bold mt-6;
 }
 
 .review-section p {
-    @apply sm:flex my-2;
+    @apply sm:flex my-3.5 space-x-4;
 }
 
 .review-section dt {
-    @apply font-medium sm:w-2/6 text-gray-500 pr-2;
+    @apply font-medium sm:w-2/6 text-gray-500;
 }
 
 .review-section dd {
-    @apply text-gray-800 sm:w-4/6 truncate;
+    @apply text-gray-900 sm:w-4/6 overflow-hidden overflow-ellipsis;
 }

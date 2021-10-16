@@ -310,23 +310,39 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         <h3 className="text-3xl text-secondary">Awards, Thesis & R&D</h3>
                         <hr className="mt-3 mb-4" />
                         <h4>Honours, Awards etc.</h4>
-                        <div className="divide-y-2 divide-dashed divide-red-500">
-                            {details.awards.map((item) => (
-                                <div key={item.id} className="flex items-center mb-2 justify-between">
-                                    <div className="flex flex-col">
-                                        <div>
-                                            <dt>Award Title</dt> : {item.title}
-                                        </div>
-                                        <div>
-                                            <dt>Organization</dt> : {item.org}
-                                        </div>
-                                        <div>
-                                            <dt>Year of Award</dt> : {item.year}
-                                        </div>
+                        {details.awards.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded-md">
+                                <div className="px-2.5 min-w-120 bg-gray-100 flex">
+                                    <div className="w-5/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Award Title
+                                    </div>
+                                    <div className="w-5/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Organization
+                                    </div>
+
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Year
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                                <div className="px-2.5 min-w-120 bg-gray-50 divide-y divide-gray-200">
+                                    {details.awards.map((item) => (
+                                        <div key={item.id} className="flex">
+                                            <div className="w-5/12 px-1.5 py-4 truncate text-sm text-gray-800">
+                                                {item.title}
+                                            </div>
+                                            <div className="w-5/12 px-1.5 py-4 truncate text-sm text-gray-800">
+                                                {item.org}
+                                            </div>
+                                            <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">
+                                                {item.year}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
 
                         <h4>Details of PhD/MTech/MPhil thesis supervised</h4>
                         <h4>Details of PhD thesis supervised (completed only)</h4>

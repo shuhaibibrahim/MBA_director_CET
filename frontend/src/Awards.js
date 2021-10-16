@@ -92,9 +92,9 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderAward(
             details.awards.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.org}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.year}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.org}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.year}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -112,10 +112,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderThesis(
             details.thesis.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.studentname}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.supervisor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.year}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.studentname}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.supervisor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.year}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -133,10 +133,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderProjects1(
             details.projects1.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -154,10 +154,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderProjects2(
             details.projects2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -175,10 +175,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderProjects3(
             details.projects3.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -196,10 +196,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderProjects4(
             details.projects4.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -217,10 +217,10 @@ function Awards({ nextform, prevform, details, setDetails }) {
         setRenderProjects5(
             details.projects5.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -312,7 +312,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.awards.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Award Title
@@ -354,7 +354,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                     name="singlySupervisedThesis"
                                     value={details.singlySupervisedThesis}
                                     onChange={update}
-                                    type="text"
+                                    type="number"
                                 />
                             </div>
                             <div className="form-field mt-4 sm:mt-0 sm:w-1/2 sm:ml-2.5">
@@ -367,7 +367,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                     name="jointlySupervisedThesis"
                                     value={details.jointlySupervisedThesis}
                                     onChange={update}
-                                    type="text"
+                                    type="number"
                                 />
                             </div>
                         </div>
@@ -457,7 +457,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         </div>
 
                         {details.thesis.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Student Name
@@ -495,7 +495,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="thesisSupervised"
                                 name="thesisSupervised"
                                 onChange={update}
@@ -522,7 +522,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="sponsoredRD1"
                                 name="sponsoredRD1"
                                 onChange={update}
@@ -615,7 +615,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.projects1.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -656,7 +656,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="sponsoredRD2"
                                 name="sponsoredRD2"
                                 onChange={update}
@@ -749,7 +749,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.projects2.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -790,7 +790,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="sponsoredRD3"
                                 name="sponsoredRD3"
                                 onChange={update}
@@ -883,7 +883,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.projects3.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -924,7 +924,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="sponsoredRD4"
                                 name="sponsoredRD4"
                                 onChange={update}
@@ -1017,7 +1017,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.projects4.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
@@ -1058,7 +1058,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </label>
                             <input
                                 className="form-control w-20"
-                                type="text"
+                                type="number"
                                 id="sponsoredRD5"
                                 name="sponsoredRD5"
                                 onChange={update}
@@ -1150,7 +1150,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.projects5.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title

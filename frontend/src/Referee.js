@@ -53,12 +53,12 @@ function Referee({ nextform, prevform, details, setDetails }) {
         setRenderReferee(
             details.referee.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.name}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate">{item.designation}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.organization}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.email}</div>
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.postaladdress}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.phoneno}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.name}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.designation}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.organization}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.email}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.postaladdress}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.phoneno}</div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -201,7 +201,7 @@ function Referee({ nextform, prevform, details, setDetails }) {
                             </button>
                         </div>
                         {details.referee.length !== 0 ? (
-                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Name
