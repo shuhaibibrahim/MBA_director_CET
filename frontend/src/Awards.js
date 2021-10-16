@@ -339,12 +339,12 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 <h3 className="section-label pr-2">Details of PhD / MTech / MPhil thesis supervised</h3>
                 <hr className="mb-4" />
                 <div className="sm:flex justify-between">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of PhD thesis supervised (completed only)
                     </h4>
                     <div className="form-card rounded-xl">
                         <div className="sm:flex items-end">
-                            <div className="form-field mt-4 sm:w-1/2 sm:mr-2.5">
+                            <div className="form-field sm:w-1/2 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="singlySupervisedThesis">
                                     No. of Ph.D. thesis supervised singly (defended successfully)
                                 </label>
@@ -357,7 +357,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                                     type="text"
                                 />
                             </div>
-                            <div className="form-field mt-4 sm:w-1/2 sm:ml-2.5">
+                            <div className="form-field mt-4 sm:mt-0 sm:w-1/2 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="jointlySupervisedThesis">
                                     No. of Ph.D. thesis supervised jointly (defended successfully)
                                 </label>
@@ -485,7 +485,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between mt-5">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         M.Tech, MPhil, MTech, MBA thesis supervised (completed only)
                     </h4>
                     <div className="form-card rounded-xl">
@@ -511,7 +511,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 <hr className="mb-4" />
 
                 <div className="sm:flex justify-between">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of sponsored R&D projects (completed, and as Principal Investigator)
                     </h4>
                     <div className="form-card rounded-xl">
@@ -645,7 +645,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between my-5">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of sponsored R&D projects (in-progress and as Principal Investigator)
                     </h4>
                     <div className="form-card rounded-xl">
@@ -779,7 +779,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of sponsored R&D projects (Completed and as Co-Principal Investigator)
                     </h4>
                     <div className="form-card rounded-xl">
@@ -913,7 +913,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between my-5">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of sponsored R&D projects (in-progress and as Co-Principal Investigator)
                     </h4>
                     <div className="form-card rounded-xl">
@@ -1047,7 +1047,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h4 className="sm:w-2/6 font-bold text-gray-800 pr-2 sm:pt-4 pb-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 sm:pt-4 pb-2">
                         Details of industry or govt-sponsored consulting assignments completed
                     </h4>
                     <div className="form-card rounded-xl">

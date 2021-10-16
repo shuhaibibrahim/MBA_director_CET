@@ -45,7 +45,7 @@ function Books({ nextform, prevform, details, setDetails }) {
         location: "",
         pages: "",
         month: "",
-        yearheld: "",
+        // yearheld: "",
         id: 0,
     });
     const [publications5, setPublications5] = useState({
@@ -55,7 +55,7 @@ function Books({ nextform, prevform, details, setDetails }) {
         location: "",
         pages: "",
         month: "",
-        yearheld: "",
+        // yearheld: "",
         id: 0,
     });
 
@@ -162,53 +162,50 @@ function Books({ nextform, prevform, details, setDetails }) {
 
         setRenderPublications4(
             details.publications4.map((item) => (
-                <div key={item.id} className="flex items-center border-2 border-black mb-2 justify-between">
-                    <div className="flex flex-col">
-                        <div>Co-authors: {item.coauthors}</div>
-                        <div>Title: {item.title}</div>
-                        <div>Conference Name: {item.conferencename}</div>
-                        <div>Location: {item.location}</div>
-                        <div>Pages: {item.pages}</div>
-                        <div>Month: {item.month}</div>
-                        <div>Year Held: {item.yearheld}</div>
+                <div key={item.id} className="flex">
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.conferencename}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.location}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.month}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
+                        <button
+                            onClick={(e) => {
+                                removeItem(e, "publications4", item.id);
+                            }}
+                            className="text-secondary hover:text-secondary-dark transition"
+                        >
+                            Remove
+                        </button>
                     </div>
-
-                    <button
-                        className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
-                        onClick={(e) => {
-                            removeItem(e, "publications4", item.id);
-                        }}
-                    >
-                        Remove
-                    </button>
                 </div>
             ))
         );
 
         setRenderPublications5(
             details.publications5.map((item) => (
-                <div key={item.id} className="flex items-center border-2 border-black mb-2 justify-between">
-                    <div className="flex flex-col">
-                        <div>Co-authors: {item.coauthors}</div>
-                        <div>Title: {item.title}</div>
-                        <div>Conference Name: {item.conferencename}</div>
-                        <div>Location: {item.location}</div>
-                        <div>Pages: {item.pages}</div>
-                        <div>Month: {item.month}</div>
-                        <div>Year Held: {item.yearheld}</div>
+                <div key={item.id} className="flex">
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.title}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.coauthors}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.conferencename}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.location}</div>
+                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.month}</div>
+                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.pages}</div>
+                    <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
+                        <button
+                            onClick={(e) => {
+                                removeItem(e, "publications5", item.id);
+                            }}
+                            className="text-secondary hover:text-secondary-dark transition"
+                        >
+                            Remove
+                        </button>
                     </div>
-
-                    <button
-                        className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
-                        onClick={(e) => {
-                            removeItem(e, "publications5", item.id);
-                        }}
-                    >
-                        Remove
-                    </button>
                 </div>
             ))
         );
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [details]);
 
@@ -273,7 +270,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">Provide details of up to 4 most significant & recent books</h3>
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Provide details of up to 4 most significant & recent books
+                    </h4>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="title">
@@ -424,9 +423,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between mb-5">
-                    <h3 className="section-label pr-2">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
                         Provide details of up to 4 most significant & recent papers published as a book chapter
-                    </h3>
+                    </h4>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="title">
@@ -589,7 +588,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between mb-5">
-                    <h3 className="section-label pr-2">Provide details of up to 10 most significant & recent papers</h3>
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Provide details of up to 10 most significant & recent papers
+                    </h4>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="sm:flex items-end">
                             <div className="form-field sm:w-1/2 sm:mr-2.5">
@@ -819,7 +820,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">Provide details of up to 5 most significant & recent papers </h3>
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Provide details of up to 5 most significant & recent papers
+                    </h4>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="sm:flex items-end">
                             <div className="form-field sm:w-1/2 sm:mr-2.5">
@@ -1026,7 +1029,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between mb-5">
-                    <h3 className="section-label pr-2">Provide details of up to 5 most significant & recent papers </h3>
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Provide details of up to 5 most significant & recent papers
+                    </h4>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="sm:flex items-end">
                             <div className="form-field sm:w-1/2 sm:mr-2.5">
@@ -1175,7 +1180,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                         </div>
                         {details.publications4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5">
-                                <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                <div className="px-2.5 min-w-160 bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -1189,14 +1194,9 @@ function Books({ nextform, prevform, details, setDetails }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Location
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
-                                        Volume
-                                    </div>
+
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
-                                        Month
-                                    </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
-                                        Year
+                                        Year & Month
                                     </div>
                                     <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Pages
@@ -1205,7 +1205,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                                         <span className="sr-only">Remove</span>
                                     </div>
                                 </div>
-                                <div className="px-2.5 min-w-200 bg-white divide-y divide-gray-200">
+                                <div className="px-2.5 min-w-160 bg-white divide-y divide-gray-200">
                                     {renderPublications4}
                                 </div>
                             </div>
@@ -1215,43 +1215,34 @@ function Books({ nextform, prevform, details, setDetails }) {
                     </div>
                 </div>
 
-                <div className="sm:flex justify-between mb-5">
+                <div className="sm:flex justify-between">
                     <h3 className="section-label pr-2">
                         Publications / Presentation (in peer-reviewed conferences held in India)
                     </h3>
-                    <label className="form-label mb-1" htmlFor="noPublished5">
-                        No.of papers published or accepted for publication or presented in refereed conferences :
-                        <input
-                            className="form-control ml-2"
-                            type="text"
-                            id="noPublished5"
-                            name="noPublished5"
-                            onChange={update}
-                        />
-                    </label>
-                    <h2 className="my-3">Provide details of up to 5 most significant & recent papers </h2>
-                    <div className="transition duration-500 ease-in-out">
-                        {renderPublications5}
-                        <div className="grid gap-3 mb-7">
-                            <div className="form-field">
-                                <label className="form-label mb-1" htmlFor="coauthors">
-                                    Co-authors
-                                </label>
-                                <input
-                                    className="form-control w-full"
-                                    type="text"
-                                    id="coauthors"
-                                    name="coauthors"
-                                    value={publications5.coauthors}
-                                    onChange={(e) => {
-                                        setPublications5({
-                                            ...publications5,
-                                            coauthors: e.target.value,
-                                        });
-                                    }}
-                                />
-                            </div>
-                            <div className="form-field">
+                    <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
+                        <div className="form-field">
+                            <label className="form-label mb-1" htmlFor="noPublished5">
+                                No.of papers published or accepted for publication or presented in refereed conferences
+                                :
+                            </label>
+                            <input
+                                className="form-control w-20"
+                                type="text"
+                                id="noPublished5"
+                                name="noPublished5"
+                                onChange={update}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sm:flex justify-between mb-5">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Provide details of up to 5 most significant & recent papers
+                    </h4>
+                    <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
+                        <div className="sm:flex items-end">
+                            <div className="form-field sm:w-1/2 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="title">
                                     Title
                                 </label>
@@ -1266,7 +1257,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                                     }}
                                 />
                             </div>
-                            <div className="form-field">
+                            <div className="form-field mt-4 sm:mt-0 sm:w-1/2 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="conferencename">
                                     Conference Name
                                 </label>
@@ -1284,8 +1275,45 @@ function Books({ nextform, prevform, details, setDetails }) {
                                     }}
                                 />
                             </div>
+                        </div>
+                        <div className="sm:flex items-end">
+                            <div className="form-field mt-4 sm:w-6/12 md:w-7/12 lg:w-8/12 xl:w-9/12 sm:mr-2.5">
+                                <label className="form-label mb-1" htmlFor="coauthors">
+                                    Co-authors
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="coauthors"
+                                    name="coauthors"
+                                    value={publications5.coauthors}
+                                    onChange={(e) => {
+                                        setPublications5({
+                                            ...publications5,
+                                            coauthors: e.target.value,
+                                        });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field mt-4 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 sm:ml-2.5">
+                                <label className="form-label mb-1" htmlFor="pages">
+                                    Pages
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="pages"
+                                    name="pages"
+                                    value={publications5.pages}
+                                    onChange={(e) => {
+                                        setPublications5({ ...publications5, pages: e.target.value });
+                                    }}
+                                />
+                            </div>
+                        </div>
 
-                            <div className="form-field">
+                        <div className="sm:flex items-end">
+                            <div className="form-field sm:w-8/12 lg:w-5/12 mt-4 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="location">
                                     Location
                                 </label>
@@ -1303,30 +1331,13 @@ function Books({ nextform, prevform, details, setDetails }) {
                                     }}
                                 />
                             </div>
-
-                            <div className="form-field">
-                                <label className="form-label mb-1" htmlFor="pages">
-                                    Pages
-                                </label>
-                                <input
-                                    className="form-control w-full"
-                                    type="text"
-                                    id="pages"
-                                    name="pages"
-                                    value={publications5.pages}
-                                    onChange={(e) => {
-                                        setPublications5({ ...publications5, pages: e.target.value });
-                                    }}
-                                />
-                            </div>
-
-                            <div className="form-field">
+                            <div className="form-field sm:w-4/12 mt-4 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="month">
-                                    Month
+                                    Month & Year
                                 </label>
                                 <input
                                     className="form-control w-full"
-                                    type="date"
+                                    type="month"
                                     id="month"
                                     name="month"
                                     value={publications5.month}
@@ -1335,8 +1346,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                                     }}
                                 />
                             </div>
-
-                            <div className="form-field">
+                            {/* <div className="form-field">
                                 <label className="form-label mb-1" htmlFor="yearheld">
                                     Year Held
                                 </label>
@@ -1353,29 +1363,63 @@ function Books({ nextform, prevform, details, setDetails }) {
                                         });
                                     }}
                                 />
-                            </div>
+                            </div> */}
                         </div>
-                    </div>
 
-                    <div className="text-right mt-5">
-                        <button
-                            onClick={(e) => {
-                                addToList(e, "publications5", publications5);
-                                setPublications5({
-                                    coauthors: "",
-                                    title: "",
-                                    conferencename: "",
-                                    location: "",
-                                    pages: "",
-                                    month: "",
-                                    yearheld: "",
-                                    id: 0,
-                                });
-                            }}
-                            className="btn"
-                        >
-                            Add to List
-                        </button>
+                        <div className="text-right mt-5">
+                            <button
+                                onClick={(e) => {
+                                    addToList(e, "publications5", publications5);
+                                    setPublications5({
+                                        coauthors: "",
+                                        title: "",
+                                        conferencename: "",
+                                        location: "",
+                                        pages: "",
+                                        month: "",
+                                        yearheld: "",
+                                        id: 0,
+                                    });
+                                }}
+                                className="btn"
+                            >
+                                Add to List
+                            </button>
+                        </div>
+                        {details.publications5.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                                <div className="px-2.5 min-w-160 bg-gray-100 flex">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Title
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Co-authors
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Conference Name
+                                    </div>
+
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Location
+                                    </div>
+
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Year & Month
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Pages
+                                    </div>
+                                    <div className="w-rem w-1/12 py-3">
+                                        <span className="sr-only">Remove</span>
+                                    </div>
+                                </div>
+                                <div className="px-2.5 min-w-160 bg-white divide-y divide-gray-200">
+                                    {renderPublications5}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
