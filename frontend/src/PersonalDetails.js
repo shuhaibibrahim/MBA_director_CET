@@ -16,11 +16,11 @@ function PersonalDetails({ nextform, details, setDetails }) {
     }
 
     return (
-        <div className="w-9/12 mx-auto my-6">
+        <div className="w-11/12 md:w-9/12 mx-auto my-6">
             <h2 className="font-bold text-3xl text-secondary">Personal Details</h2>
             <hr className="my-4" />
 
-            <form className="my-7">
+            <form className="mt-7 mb-4">
                 <div className="sm:flex justify-between">
                     <h3 className="section-label pr-2">Account Details</h3>
                     <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
@@ -272,7 +272,10 @@ function PersonalDetails({ nextform, details, setDetails }) {
                     </div>
                 </div>
 
-                <div className="text-right mt-6">
+                <div className="text-right mt-8 space-x-6">
+                    <button className="btn-outline" onClick="">
+                        Save
+                    </button>
                     <button className="btn-secondary" onClick={saveInfoNext}>
                         Next
                     </button>
@@ -281,4 +284,5 @@ function PersonalDetails({ nextform, details, setDetails }) {
         </div>
     );
 }
+
 export default PersonalDetails;

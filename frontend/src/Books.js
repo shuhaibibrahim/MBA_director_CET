@@ -245,11 +245,11 @@ function Books({ nextform, prevform, details, setDetails }) {
     };
 
     return (
-        <div className="w-9/12 mx-auto my-6">
+        <div className="w-11/12 md:w-9/12 mx-auto my-6">
             <h2 className="font-bold text-3xl text-secondary">Books and Publications</h2>
             <hr className="my-4" />
 
-            <form className="my-7">
+            <form className="mt-7 mb-4">
                 {/* <<h3 className="section-label pr-2">Publications</h3> */}
                 <div className="sm:flex justify-between">
                     <h3 className="section-label pr-2">Books</h3>
@@ -1423,13 +1423,18 @@ function Books({ nextform, prevform, details, setDetails }) {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between mt-6">
+                <div className="flex items-center justify-between mt-8">
                     <button onClick={goPrev} className="btn">
                         Prev
                     </button>
-                    <button onClick={saveInfoNext} className="btn-secondary">
-                        Next
-                    </button>
+                    <div className="space-x-6">
+                        <button className="btn-outline" onClick="">
+                            Save
+                        </button>
+                        <button onClick={saveInfoNext} className="btn-secondary">
+                            Next
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

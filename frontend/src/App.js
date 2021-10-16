@@ -30,7 +30,7 @@ export default function App() {
     return (
         <div className="App bg-gray-100 min-h-screen flex flex-col">
             <header className="bg-white shadow-md py-4">
-                <div className="w-9/12 m-auto flex justify-between items-center">
+                <div className="w-11/12 md:w-9/12 m-auto flex justify-between items-center">
                     <div className="w-64">
                         <TitleSVG />
                     </div>
@@ -69,8 +69,8 @@ export default function App() {
                     )}
                 </div>
             </header>
-            <Form user={user} logout={logout} />
-            {/* {user ? (
+            {/* <Form user={user} logout={logout} /> */}
+            {user ? (
                 <Form user={user} logout={logout} />
             ) : (
                 <Login
@@ -80,7 +80,7 @@ export default function App() {
                     hasAccount={hasAccount}
                     setHasAccount={setHasAccount}
                 />
-            )} */}
+            )}
         </div>
     );
 }

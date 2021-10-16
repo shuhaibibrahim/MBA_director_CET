@@ -12,7 +12,10 @@ module.exports = {
                     DEFAULT: "#CC565C",
                     dark: "#BC464C",
                 },
-                tertiary: "#875A70",
+                tertiary: {
+                    DEFAULT: "#875A70",
+                    dark: "#774A60",
+                },
             },
         },
     },
