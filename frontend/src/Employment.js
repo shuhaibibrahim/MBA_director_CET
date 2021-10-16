@@ -238,10 +238,10 @@ function Employment({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="flex items-center justify-between mt-6">
-                    <button onClick={goPrev} className="btn-secondary">
+                    <button onClick={goPrev} className="btn">
                         Prev
                     </button>
-                    <button onClick={saveInfoNext} className="btn">
+                    <button onClick={saveInfoNext} className="btn-secondary">
                         Next
                     </button>
                 </div>

@@ -147,7 +147,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 </label>
                                 <input
                                     className="form-control w-full"
-                                    type="text"
+                                    type="tel"
                                     id="mob"
                                     name="mob"
                                     value={details.mob}
@@ -160,7 +160,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                                 </label>
                                 <input
                                     className="form-control w-full"
-                                    type="text"
+                                    type="tel"
                                     id="phone"
                                     name="phone"
                                     value={details.phone}
@@ -273,7 +273,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                 </div>
 
                 <div className="text-right mt-6">
-                    <button className="btn" onClick={saveInfoNext}>
+                    <button className="btn-secondary" onClick={saveInfoNext}>
                         Next
                     </button>
                 </div>

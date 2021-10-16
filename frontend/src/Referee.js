@@ -52,44 +52,47 @@ function Referee({ nextform, prevform, details, setDetails }) {
     useEffect(() => {
         setRenderReferee(
             details.referee.map((item) => (
-                <div key={item.id} className="flex items-center border-2 border-black mb-2 justify-between">
-                    <div className="flex flex-col">
-                        <div>Name: {item.name}</div>
-                        <div>Designation: {item.designation}</div>
-                        <div>Organization: {item.organization}</div>
-                        <div>Email Address: {item.email}</div>
-                        <div>Postal Address: {item.postaladdress}</div>
-                        <div>Phone Number: {item.phoneno}</div>
+                <div key={item.id} className="flex">
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.name}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate">{item.designation}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.organization}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.email}</div>
+                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.postaladdress}</div>
+                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-500">{item.phoneno}</div>
+                    <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
+                        <button
+                            onClick={(e) => {
+                                removeItem(e, "filedPatents", item.id);
+                            }}
+                            className="text-secondary hover:text-secondary-dark transition"
+                        >
+                            Remove
+                        </button>
                     </div>
-
-                    <button
-                        className="my-4 bg-red-700 text-sm px-2 py-1 text-white rounded ml-2"
-                        onClick={(e) => {
-                            removeItem(e, "referee", item.id);
-                        }}
-                    >
-                        Remove
-                    </button>
                 </div>
             ))
         );
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [details]);
 
     return (
-        <div>
-            <form>
-                <h2 className="font-bold my-3">Referees</h2>
-                <div className="transition duration-500 ease-in-out">
-                    <h2 className="font-bold text-sm my-3">
-                        Note: Referees should not be friends/relatives, but strictly professional
-                    </h2>
-                    {renderReferee}
+        <div className="w-9/12 mx-auto my-6">
+            <h2 className="font-bold text-3xl text-secondary">Referees</h2>
+            <hr className="my-4" />
 
-                    <div className="grid gap-3 mb-7">
-                        <div className="form-field">
-                            <label htmlFor="name">Name</label>
+            <form className="my-7">
+                <div className="sm:flex justify-between">
+                    <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
+                        Note: Referees should not be friends/relatives, but strictly professional
+                    </h4>
+                    <div className="form-card rounded-xl ">
+                        <div className="form-field sm:w-6/12 md:w-7/12 lg:w-8/12 xl:w-9/12 sm:mr-2.5">
+                            <label className="form-label mb-1" htmlFor="name">
+                                Name
+                            </label>
                             <input
+                                className="form-control w-full"
                                 type="text"
                                 id="name"
                                 name="name"
@@ -99,45 +102,44 @@ function Referee({ nextform, prevform, details, setDetails }) {
                                 }}
                             />
                         </div>
-                        <div className="form-field">
-                            <label htmlFor="designation">Designation</label>
-                            <input
-                                type="text"
-                                id="designation"
-                                name="designation"
-                                value={referee.designation}
-                                onChange={(e) => {
-                                    setReferee({ ...referee, designation: e.target.value });
-                                }}
-                            />
+                        <div className="sm:flex items-end">
+                            <div className="form-field mt-4 sm:w-5/12 sm:mr-2.5">
+                                <label className="form-label mb-1" htmlFor="designation">
+                                    Designation
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="designation"
+                                    name="designation"
+                                    value={referee.designation}
+                                    onChange={(e) => {
+                                        setReferee({ ...referee, designation: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field mt-4 sm:w-7/12 sm:ml-2.5">
+                                <label className="form-label mb-1" htmlFor="organization">
+                                    Organization
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    id="organization"
+                                    name="organization"
+                                    value={referee.organization}
+                                    onChange={(e) => {
+                                        setReferee({ ...referee, organization: e.target.value });
+                                    }}
+                                />
+                            </div>
                         </div>
-                        <div className="form-field">
-                            <label htmlFor="organization">Organization</label>
+                        <div className="form-field mt-4">
+                            <label className="form-label mb-1" htmlFor="postaladdress">
+                                Postal Address
+                            </label>
                             <input
-                                type="text"
-                                id="organization"
-                                name="organization"
-                                value={referee.organization}
-                                onChange={(e) => {
-                                    setReferee({ ...referee, organization: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="email">Email Address</label>
-                            <input
-                                type="text"
-                                id="email"
-                                name="email"
-                                value={referee.email}
-                                onChange={(e) => {
-                                    setReferee({ ...referee, email: e.target.value });
-                                }}
-                            />
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="postaladdress">Postal Address</label>
-                            <input
+                                className="form-control w-full"
                                 type="text"
                                 id="postaladdress"
                                 name="postaladdress"
@@ -147,44 +149,97 @@ function Referee({ nextform, prevform, details, setDetails }) {
                                 }}
                             />
                         </div>
-                        <div className="form-field">
-                            <label htmlFor="phoneno">Phone Number</label>
-                            <input
-                                type="text"
-                                id="phoneno"
-                                name="phoneno"
-                                value={referee.phoneno}
-                                onChange={(e) => {
+
+                        <div className="sm:flex items-end">
+                            <div className="form-field mt-4 sm:w-1/2 sm:mr-2.5">
+                                <label className="form-label mb-1" htmlFor="email">
+                                    Email Address
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={referee.email}
+                                    onChange={(e) => {
+                                        setReferee({ ...referee, email: e.target.value });
+                                    }}
+                                />
+                            </div>
+                            <div className="form-field mt-4 sm:w-1/2 sm:ml-2.5">
+                                <label className="form-label mb-1" htmlFor="phoneno">
+                                    Phone Number
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="tel"
+                                    id="phoneno"
+                                    name="phoneno"
+                                    value={referee.phoneno}
+                                    onChange={(e) => {
+                                        setReferee({
+                                            ...referee,
+                                            phoneno: e.target.value,
+                                        });
+                                    }}
+                                />
+                            </div>
+                        </div>
+
+                        <div className="text-right mt-5">
+                            <button
+                                onClick={(e) => {
+                                    addToList(e, "referee", referee);
                                     setReferee({
                                         ...referee,
-                                        phoneno: e.target.value,
+                                        id: details.referee.length,
                                     });
                                 }}
-                            />
+                                className="btn"
+                            >
+                                Add to list
+                            </button>
                         </div>
+                        {details.referee.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5">
+                                <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Name
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Designation
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Organization
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Email Address
+                                    </div>
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Postal Address
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Phone No.
+                                    </div>
+                                    <div className="w-rem w-1/12 py-3">
+                                        <span className="sr-only">Remove</span>
+                                    </div>
+                                </div>
+                                <div className="px-2.5 min-w-200 bg-white divide-y divide-gray-200">
+                                    {renderReferee}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
-                <div className="text-center">
-                    <button
-                        onClick={(e) => {
-                            addToList(e, "referee", referee);
-                            setReferee({
-                                ...referee,
-                                id: details.referee.length,
-                            });
-                        }}
-                        className="my-4 bg-green-700 text-sm px-2 py-1 text-white rounded"
-                    >
-                        Add to list
-                    </button>
-                </div>
-
-                <div className="flex items-center justify-between">
-                    <button onClick={goPrev} className="bg-blue-500 text-white w-20 my-5 p-1 rounded">
+                <div className="flex items-center justify-between mt-6">
+                    <button onClick={goPrev} className="btn">
                         Prev
                     </button>
-                    <button onClick={saveInfoNext} className="bg-green-700 text-white w-20 my-5 p-1 rounded">
+                    <button onClick={saveInfoNext} className="btn-secondary">
                         Finish
                     </button>
                 </div>
