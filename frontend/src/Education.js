@@ -328,7 +328,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                         <div className="sm:flex items-end">
                             <div className="form-field mt-4 sm:w-5/12 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="marks">
-                                    % of Marks/Grade
+                                    % Marks/Grade
                                 </label>
                                 <input
                                     className="form-control w-full"
@@ -496,7 +496,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                         <div className="sm:flex items-end">
                             <div className="form-field mt-4 sm:w-5/12 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="marks">
-                                    % of Marks/Grade
+                                    % Marks/Grade
                                 </label>
                                 <input
                                     className="form-control w-full"
@@ -665,7 +665,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                         <div className="sm:flex items-end">
                             <div className="form-field mt-4 sm:w-5/12 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="marks">
-                                    % of Marks/Grade
+                                    % Marks/Grade
                                 </label>
                                 <input
                                     className="form-control w-full"
@@ -698,7 +698,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">Any other degree (if relevant, and not covered above)</h3>
+                    <h3 className="section-label pr-2">Any other degree (if relevant, & not covered above)</h3>
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
                         <div className="sm:flex items-end">
                             <div className="form-field sm:w-4/12 sm:mr-2.5">
@@ -835,7 +835,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                         <div className="sm:flex items-end">
                             <div className="form-field mt-4 sm:w-5/12 sm:mr-2.5">
                                 <label className="form-label mb-1" htmlFor="marks">
-                                    % of Marks/Grade
+                                    % Marks/Grade
                                 </label>
                                 <input
                                     className="form-control w-full"

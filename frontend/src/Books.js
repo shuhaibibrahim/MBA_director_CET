@@ -570,7 +570,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">Publications (international journals)</h3>
+                    <h3 className="section-label pr-2">Publications (in international journals)</h3>
                     <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="noPublished2">
@@ -802,7 +802,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                 </div>
 
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">Publications (Indian journals)</h3>
+                    <h3 className="section-label pr-2">Publications (in Indian journals)</h3>
                     <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="noPublished3">

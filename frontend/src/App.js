@@ -35,13 +35,13 @@ export default function App() {
                         <TitleSVG />
                     </div>
                     {onBoarding && !user ? (
-                        <div className="whitespace-nowrap">
+                        <div className="whitespace-nowrap space-x-4">
                             <button
                                 onClick={() => {
                                     setOnBoarding(!onBoarding);
                                     setHasAccount(true);
                                 }}
-                                className="py-2 px-4 rounded-md cursor-pointer hover:bg-gray-100 focus:ring-2 focus:ring-gray-100 mx-4 transition"
+                                className="py-2 px-4 rounded-md cursor-pointer hover:bg-gray-100 focus:ring-2 focus:ring-gray-100 transition"
                             >
                                 Log in
                             </button>
@@ -69,8 +69,8 @@ export default function App() {
                     )}
                 </div>
             </header>
-            <Form user={user} logout={logout} />
-            {/* {user ? (
+            {/* <Form user={user} logout={logout} /> */}
+            {user ? (
                 <Form user={user} logout={logout} />
             ) : (
                 <Login
@@ -80,7 +80,7 @@ export default function App() {
                     hasAccount={hasAccount}
                     setHasAccount={setHasAccount}
                 />
-            )} */}
+            )}
         </div>
     );
 }

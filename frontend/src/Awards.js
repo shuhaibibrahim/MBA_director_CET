@@ -518,7 +518,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="">
                                 No. of sponsored R&D projects (completed), with you as "Principal Investigator" (where
-                                each project is over ₹2lakhs)
+                                each project is over <i>₹2 lakhs</i>)
                             </label>
                             <input
                                 className="form-control w-20"
@@ -652,7 +652,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="">
                                 No. of sponsored R&D projects (in-progress), with you as "Principal Investigator" (where
-                                each project is over ₹2lakhs)
+                                each project is over <i>₹2 lakhs</i>)
                             </label>
                             <input
                                 className="form-control w-20"
@@ -786,7 +786,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="">
                                 No. of sponsored R&D projects (completed), with you as "Co-Principal Investigator"
-                                (where each project is over ₹2lakhs)
+                                (where each project is over <i>₹2 lakhs</i>)
                             </label>
                             <input
                                 className="form-control w-20"
@@ -920,7 +920,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="">
                                 No. of sponsored R&D projects (in-progress), with you as "Co-Principal Investigator"
-                                (where each project is over ₹2lakhs)
+                                (where each project is over <i>₹2 lakhs</i>)
                             </label>
                             <input
                                 className="form-control w-20"
@@ -1054,7 +1054,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         <div className="form-field">
                             <label className="form-label mb-1" htmlFor="">
                                 No. of sponsored consulting projects completed, with you as "Chief Investigator" (where
-                                each project is over ₹0.5lakhs)
+                                each project is over <i>₹50,000</i>)
                             </label>
                             <input
                                 className="form-control w-20"
