@@ -20,7 +20,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
             <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
             <h2 className="text-center mt-1 font-bold text-gray-500">Review your application</h2>
             <div className="w-11/12 md:w-9/12 mx-auto my-8 bg-white shadow-md rounded-xl pb-2">
-                <PDFExport paperSize="A4" scale={0.6} margin="1.5cm" ref={pdfExportComponent}>
+                <PDFExport paperSize="A4" scale={0.6} margin="1.3cm" ref={pdfExportComponent}>
                     <dl className="review-section">
                         <h3 className="text-3xl text-secondary">Personal Details</h3>
                         <hr className="mt-3 mb-4" />
@@ -1183,6 +1183,10 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                     className="btn-outline"
                     onClick={() => {
                         setformno(1);
+                        set(ref(db, "users/" + user.uid), {
+                            ...details,
+                            formno: 1,
+                        });
                         scrollTop();
                     }}
                 >
