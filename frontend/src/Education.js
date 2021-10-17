@@ -9,12 +9,12 @@ function Education({ nextform, prevform, details, setDetails, saveInfo }) {
 
     const saveInfoNext = (e) => {
         e.preventDefault();
-        nextform();
+        nextform(e);
     };
 
     const goPrev = (e) => {
         e.preventDefault();
-        prevform();
+        prevform(e);
     };
     return (
         <div className="w-11/12 md:w-9/12 mx-auto my-6">

@@ -80,12 +80,12 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
 
     const saveInfoNext = (e) => {
         e.preventDefault();
-        nextform();
+        nextform(e);
     };
 
     const goPrev = (e) => {
         e.preventDefault();
-        prevform();
+        prevform(e);
     };
 
     useEffect(() => {
