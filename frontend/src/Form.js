@@ -179,15 +179,6 @@ export default function Form({ user, logout }) {
         });
     };
 
-    const nextform = () => {
-        setformno(formno + 1);
-        scrollTop();
-    };
-    const prevform = () => {
-        setformno(formno - 1);
-        scrollTop();
-    };
-
     const saveInfo=(e)=>{
         e.preventDefault();
         set(ref(db, 'users/' + user.uid), {
@@ -201,6 +192,16 @@ export default function Form({ user, logout }) {
             alert("Couldnt save data!")
         })
     }
+
+    const nextform = () => {
+        saveInfo();
+        setformno(formno + 1);
+        scrollTop();
+    };
+    const prevform = () => {
+        setformno(formno - 1);
+        scrollTop();
+    };
 
     return (
         <>
