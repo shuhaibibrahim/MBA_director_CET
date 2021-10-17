@@ -121,6 +121,7 @@ export default function Form({ user, logout }) {
         filedPatents: [],
         referee: [],
         formSubmitted: false,
+        formno:1
     });
 
     const [formno, setformno] = useState(1);
@@ -160,6 +161,9 @@ export default function Form({ user, logout }) {
                     ...snapshot.val(),
                     ...arrayObj,
                 });
+
+                console.log(snapshot.val().formno)
+                setformno(snapshot.val().formno)
                 // console.log({
                 //     ...snapshot.val(),
                 //     ...arrayObj,
@@ -169,6 +173,13 @@ export default function Form({ user, logout }) {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    // useEffect(() => {
+    //     setDetails({
+    //         ...details,
+    //         formno:formno
+    //     })
+    // }, [formno])
 
     const scrollTop = () => {
         window.scrollTo({
@@ -181,7 +192,6 @@ export default function Form({ user, logout }) {
         e.preventDefault();
         set(ref(db, "users/" + user.uid), {
             ...details,
-            userSignInEmail: user.email,
         })
             .then(() => {
                 alert("Saved successfully");
@@ -193,14 +203,23 @@ export default function Form({ user, logout }) {
 
     const nextform = (e) => {
         e.preventDefault();
-        set(ref(db, "users/" + user.uid), {
+        
+        setDetails({
             ...details,
-            userSignInEmail: user.email,
-        });
+            formno:formno+1
+        })
         setformno(formno + 1);
+
+        set(ref(db, "users/" + user.uid), {
+            ...details
+        })
         scrollTop();
     };
     const prevform = () => {
+        setDetails({
+            ...details,
+            formno:formno-1
+        })
         setformno(formno - 1);
         scrollTop();
     };
