@@ -712,7 +712,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="name"
                                     value={details.other.name}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -727,7 +727,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="college"
                                     value={details.other.college}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -745,7 +745,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="university"
                                     value={details.other.university}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -760,7 +760,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="discipline"
                                     value={details.other.discipline}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -778,7 +778,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="startdate"
                                     value={details.other.startdate}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -793,7 +793,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="enddate"
                                     value={details.other.enddate}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -811,7 +811,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="division"
                                     value={details.other.division}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -826,7 +826,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="system"
                                     value={details.other.system}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -844,7 +844,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="marks"
                                     value={details.other.marks}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
@@ -859,7 +859,7 @@ function Education({ nextform, prevform, details, setDetails }) {
                                     name="others"
                                     value={details.other.others}
                                     onChange={(e) => {
-                                        updateEducation(e, "others");
+                                        updateEducation(e, "other");
                                     }}
                                 />
                             </div>
