@@ -3,13 +3,7 @@ import React from "react";
 export default function TitleSVG() {
     return (
         <svg viewBox="0 0 517 190" xmlns="http://www.w3.org/2000/svg">
-            <text
-                fill="#875A70"
-                xmlSpace="preserve"
-                font-family="Josefin Sans"
-                font-size="14.9942"
-                letter-spacing="0em"
-            >
+            <text fill="#875A70" xmlSpace="preserve" fontFamily="Josefin Sans" fontSize="14.9942" letterSpacing="0em">
                 <tspan x="1.31021" y="185.848">
                     Department of Business Administration, College of Engineering Trivandrum
                 </tspan>
@@ -17,10 +11,10 @@ export default function TitleSVG() {
             <text
                 fill="#CC565C"
                 xmlSpace="preserve"
-                font-family="Josefin Sans"
-                font-size="49.2353"
-                font-weight="300"
-                letter-spacing="0em"
+                fontFamily="Josefin Sans"
+                fontSize="49.2353"
+                fontWeight="300"
+                letterSpacing="0em"
             >
                 <tspan x="145" y="107.809">
                     SCHOOL OF{" "}
@@ -32,10 +26,10 @@ export default function TitleSVG() {
             <text
                 fill="#F68966"
                 xmlSpace="preserve"
-                font-family="Josefin Sans"
-                font-size="74.0046"
-                font-weight="600"
-                letter-spacing="0em"
+                fontFamily="Josefin Sans"
+                fontSize="74.0046"
+                fontWeight="600"
+                letterSpacing="0em"
             >
                 <tspan x="145" y="55.5011">
                     CET
@@ -45,10 +39,10 @@ export default function TitleSVG() {
             <text
                 fill="#875A70"
                 xmlSpace="preserve"
-                font-family="Josefin Slab"
-                font-size="44.9952"
-                font-weight="bold"
-                letter-spacing="0em"
+                fontFamily="Josefin Slab"
+                fontSize="44.9952"
+                fontWeight="bold"
+                letterSpacing="0em"
             >
                 <tspan x="1" y="156.749">
                     MBA
