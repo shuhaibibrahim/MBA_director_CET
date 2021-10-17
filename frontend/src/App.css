@@ -78,3 +78,19 @@
 .review-section dd {
     @apply text-gray-900 sm:w-4/6 overflow-hidden overflow-ellipsis;
 }
+
+.strip {
+    @apply mt-4 flex justify-center flex-wrap space-x-3 md:space-x-6;
+}
+
+.strip div {
+    @apply my-2.5;
+}
+
+.strip .text-gray-600 span:nth-child(1) {
+    @apply bg-primary text-white px-3 py-2 rounded-md mr-2;
+}
+
+.strip .text-gray-400 span:nth-child(1) {
+    @apply px-3 py-2 rounded-md mr-1 text-gray-500;
+}

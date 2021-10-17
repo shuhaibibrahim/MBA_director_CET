@@ -121,7 +121,7 @@ export default function Form({ user, logout }) {
         filedPatents: [],
         referee: [],
         formSubmitted: false,
-        formno:1
+        formno: 1,
     });
 
     const [formno, setformno] = useState(0);
@@ -162,16 +162,14 @@ export default function Form({ user, logout }) {
                     ...arrayObj,
                 });
 
-                console.log(snapshot.val().formno)
-                setformno(snapshot.val().formno)
+                console.log(snapshot.val().formno);
+                setformno(snapshot.val().formno);
                 // console.log({
                 //     ...snapshot.val(),
                 //     ...arrayObj,
                 // });
-            }
-            else
-            {
-                setformno(1)
+            } else {
+                setformno(1);
             }
         });
 
@@ -207,13 +205,13 @@ export default function Form({ user, logout }) {
 
     const nextform = (e) => {
         e.preventDefault();
-        
+
         setformno(formno + 1);
 
         set(ref(db, "users/" + user.uid), {
             ...details,
-            formno:formno+1
-        })
+            formno: formno + 1,
+        });
         scrollTop();
     };
     const prevform = () => {
@@ -221,8 +219,8 @@ export default function Form({ user, logout }) {
 
         set(ref(db, "users/" + user.uid), {
             ...details,
-            formno:formno-1
-        })
+            formno: formno - 1,
+        });
         scrollTop();
     };
 
@@ -233,6 +231,41 @@ export default function Form({ user, logout }) {
             ) : (
                 <>
                     <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
+                    <div className={formno === 8 ? "hidden" : "strip"}>
+                        <div className={formno === 1 ? "text-gray-600" : "text-gray-400"}>
+                            <span>1</span>
+                            <span>Personal</span>
+                        </div>
+                        <div className={formno === 2 ? "text-gray-600" : "text-gray-400"}>
+                            <span>2</span>
+                            <span>Education</span>
+                        </div>
+                        <div className={formno === 3 ? "text-gray-600" : "text-gray-400"}>
+                            <span>3</span>
+                            <span>Employment</span>
+                        </div>
+                        <div className={formno === 4 ? "text-gray-600" : "text-gray-400"}>
+                            <span>4</span>
+                            <span>Achievements</span>
+                        </div>
+                        <div className={formno === 5 ? "text-gray-600" : "text-gray-400"}>
+                            <span>5</span>
+                            <span>Publications</span>
+                        </div>
+                        <div className={formno === 6 ? "text-gray-600" : "text-gray-400"}>
+                            <span>6</span>
+                            <span>Patents</span>
+                        </div>
+                        <div className={formno === 7 ? "text-gray-600" : "text-gray-400"}>
+                            <span>7</span>
+                            <span>Referees</span>
+                        </div>
+                    </div>
+                    {formno === 0 && (
+                        <div className="flex justify-center items-center mt-16">
+                            <div className="spinner-border" />
+                        </div>
+                    )}
                     {formno === 1 && (
                         <PersonalDetails
                             nextform={nextform}
