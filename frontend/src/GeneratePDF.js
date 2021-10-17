@@ -17,6 +17,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
 
     return (
         <>
+            <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
             <h2 className="text-center mt-1 font-bold text-gray-500">Review your application</h2>
             <div className="w-11/12 md:w-9/12 mx-auto my-8 bg-white shadow-md rounded-xl pb-2">
                 <PDFExport paperSize="A4" scale={0.6} margin="1.5cm" ref={pdfExportComponent}>

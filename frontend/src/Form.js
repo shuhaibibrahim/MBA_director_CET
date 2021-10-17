@@ -230,40 +230,52 @@ export default function Form({ user, logout }) {
                 <AlreadySubmitted />
             ) : (
                 <>
-                    <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
-                    <div className={formno === 8 ? "hidden" : "strip"}>
-                        <div className={formno === 1 ? "text-gray-600" : "text-gray-400"}>
-                            <span>1</span>
-                            <span>Personal</span>
-                        </div>
-                        <div className={formno === 2 ? "text-gray-600" : "text-gray-400"}>
-                            <span>2</span>
-                            <span>Education</span>
-                        </div>
-                        <div className={formno === 3 ? "text-gray-600" : "text-gray-400"}>
-                            <span>3</span>
-                            <span>Employment</span>
-                        </div>
-                        <div className={formno === 4 ? "text-gray-600" : "text-gray-400"}>
-                            <span>4</span>
-                            <span>Achievements</span>
-                        </div>
-                        <div className={formno === 5 ? "text-gray-600" : "text-gray-400"}>
-                            <span>5</span>
-                            <span>Publications</span>
-                        </div>
-                        <div className={formno === 6 ? "text-gray-600" : "text-gray-400"}>
-                            <span>6</span>
-                            <span>Patents</span>
-                        </div>
-                        <div className={formno === 7 ? "text-gray-600" : "text-gray-400"}>
-                            <span>7</span>
-                            <span>Referees</span>
-                        </div>
-                    </div>
+                    {formno === 0 || formno === 8 ? (
+                        <></>
+                    ) : (
+                        <>
+                            <h1 className="text-4xl text-tertiary font-light mt-8 text-center">
+                                Application for MBA Director
+                            </h1>
+                            <div className="strip">
+                                <div className={formno === 1 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>1</span>
+                                    <span>Personal</span>
+                                </div>
+                                <div className={formno === 2 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>2</span>
+                                    <span>Education</span>
+                                </div>
+                                <div className={formno === 3 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>3</span>
+                                    <span>Employment</span>
+                                </div>
+                                <div className={formno === 4 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>4</span>
+                                    <span>Achievements</span>
+                                </div>
+                                <div className={formno === 5 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>5</span>
+                                    <span>Publications</span>
+                                </div>
+                                <div className={formno === 6 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>6</span>
+                                    <span>Patents</span>
+                                </div>
+                                <div className={formno === 7 ? "text-gray-600" : "text-gray-400"}>
+                                    <span>7</span>
+                                    <span>Referees</span>
+                                </div>
+                            </div>
+                        </>
+                    )}
                     {formno === 0 && (
-                        <div className="flex justify-center items-center mt-16">
-                            <div className="spinner-border" />
+                        <div className="flex-75 flex justify-center items-center">
+                            <div className="flex-75 flex justify-center items-center">
+                                <div className="text-center h-fit">
+                                    <div className="spinner-border" />
+                                </div>
+                            </div>
                         </div>
                     )}
                     {formno === 1 && (
