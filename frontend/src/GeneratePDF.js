@@ -11,6 +11,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
         set(ref(db, "users/" + user.uid), {
             ...details,
             userSignInEmail: user.email,
+            formSubmitted:1
         });
     };
 
