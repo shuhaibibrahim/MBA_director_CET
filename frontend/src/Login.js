@@ -71,7 +71,7 @@ function Login({ setUser, onBoarding, setOnBoarding, hasAccount, setHasAccount }
                             </button>
                             <hr className="mt-6 mb-5" />
                             <p>
-                                Dont have an account?
+                                Dont have an account?{" "}
                                 <span
                                     className="cursor-pointer text-primary hover:underline hover:text-primary-dark transition"
                                     onClick={() => {

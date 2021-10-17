@@ -1,5 +1,4 @@
 import React from "react";
-// import { db } from "./firebase_config";
 
 function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
     function updatePersonal(e) {

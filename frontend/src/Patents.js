@@ -280,22 +280,22 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.patents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-Inventors
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent No.
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent Authority
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Organization
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -453,22 +453,22 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.filedPatents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-Inventors
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent No.
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent Authority
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Organization
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
                                     <div className="w-rem w-1/12 py-3">

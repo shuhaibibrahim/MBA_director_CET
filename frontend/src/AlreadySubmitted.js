@@ -1,5 +1,4 @@
 import React from "react";
-// import TitleSVG from "./TitleSVG";
 
 function AlreadySubmitted({ logout }) {
     return (

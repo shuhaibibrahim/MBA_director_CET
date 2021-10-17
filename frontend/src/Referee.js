@@ -74,7 +74,7 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
-                                removeItem(e, "filedPatents", item.id);
+                                removeItem(e, "referee", item.id);
                             }}
                             className="text-secondary hover:text-secondary-dark transition"
                         >
@@ -215,22 +215,22 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.referee.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Name
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Designation
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Organization
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Email Address
                                     </div>
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Postal Address
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Phone No.
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -256,7 +256,7 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
                             Save
                         </button>
                         <button onClick={saveInfoNext} className="btn-secondary">
-                            Next
+                            Finish
                         </button>
                     </div>
                 </div>

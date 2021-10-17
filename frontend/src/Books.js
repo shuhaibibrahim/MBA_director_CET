@@ -451,20 +451,20 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.books.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Publisher
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Edition
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -615,20 +615,20 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Publisher
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Edition
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -839,29 +839,29 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Journal Name
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Publisher
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Volume
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Indexed In
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Pages
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -1052,26 +1052,26 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Journal Name
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Publisher
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Volume
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Pages
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -1260,24 +1260,24 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Conference Name
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Location
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Year & Month
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Pages
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -1469,24 +1469,24 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Conference Name
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Location
                                     </div>
 
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Year & Month
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Pages
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
