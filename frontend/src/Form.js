@@ -119,7 +119,7 @@ export default function Form({ user, logout }) {
         patents: [],
         filedPatents: [],
         referee: [],
-        formSubmitted:0
+        formSubmitted:false
     });
 
     const [formno, setformno] = useState(1);
