@@ -1,7 +1,7 @@
 import React from "react";
 // import { db } from "./firebase_config";
 
-function PersonalDetails({ nextform, details, setDetails }) {
+function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
     function updatePersonal(e) {
         var newPersonal = { ...details };
         newPersonal[e.target.name] = e.target.value;
@@ -273,7 +273,7 @@ function PersonalDetails({ nextform, details, setDetails }) {
                 </div>
 
                 <div className="text-right mt-8 space-x-6">
-                    <button className="btn-outline" onClick="">
+                    <button className="btn-outline" onClick={saveInfo}>
                         Save
                     </button>
                     <button className="btn-secondary" onClick={saveInfoNext}>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Awards({ nextform, prevform, details, setDetails }) {
+function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
     const [award, setAward] = useState({ title: "", org: "", year: "", id: 0 });
     const [thesis, setThesis] = useState({
         studentname: "",
@@ -1184,7 +1184,7 @@ function Awards({ nextform, prevform, details, setDetails }) {
                         Prev
                     </button>
                     <div className="space-x-6">
-                        <button className="btn-outline" onClick="">
+                        <button className="btn-outline" onClick={saveInfo}>
                             Save
                         </button>
                         <button onClick={saveInfoNext} className="btn-secondary">

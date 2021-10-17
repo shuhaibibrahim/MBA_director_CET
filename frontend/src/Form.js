@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import PersonalDetails from "./PersonalDetails";
 import Education from "./Education";
@@ -8,6 +8,8 @@ import Books from "./Books";
 import Patents from "./Patents";
 import Referee from "./Referee";
 import GeneratePDF from "./GeneratePDF";
+import { db } from './firebase_config'
+import { ref, set, onValue } from 'firebase/database'
 
 export default function Form({ user, logout }) {
     const personal = {
@@ -121,6 +123,54 @@ export default function Form({ user, logout }) {
 
     const [formno, setformno] = useState(1);
 
+    useEffect(() => {
+        
+        var dbRef=ref(db,'users/' + user.uid)
+
+        onValue(dbRef, (snapshot) => {
+            if(snapshot.exists())
+            {
+                var arrayObj={}
+                var arrNames=[
+                    "awards",
+                    "thesis",
+                    "projects1",
+                    "projects2",
+                    "projects3",
+                    "projects4",
+                    "projects5",
+                    "books",
+                    "publications1",
+                    "publications2",
+                    "publications3",
+                    "publications4",
+                    "publications5",
+                    "patents",
+                    "filedPatents",
+                    "referee",
+                ]
+
+                for(var aname of arrNames)
+                {
+                    if(snapshot.val()[aname]==undefined)
+                        arrayObj[aname]=[]
+                }
+
+                // console.log(arrayObj)
+
+                setDetails({
+                    ...snapshot.val(),
+                    ...arrayObj
+                })
+                console.log({
+                    ...snapshot.val(),
+                    ...arrayObj
+                })
+            }   
+        });
+
+    }, [])
+
     const scrollTop = () => {
         window.scrollTo({
             top: 0,
@@ -137,27 +187,35 @@ export default function Form({ user, logout }) {
         scrollTop();
     };
 
+    const saveInfo=(e)=>{
+        e.preventDefault();
+        set(ref(db, 'users/' + user.uid), {
+            ...details,
+            userSignInEmail:user.email
+        });
+    }
+
     return (
         <>
             <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
-            {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} />}
+            {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} saveInfo={saveInfo} />}
             {formno === 2 && (
-                <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
             {formno === 3 && (
-                <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
             {formno === 4 && (
-                <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
             {formno === 5 && (
-                <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
             {formno === 6 && (
-                <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
             {formno === 7 && (
-                <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} />
+                <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
             )}
 
             {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Referee({ nextform, prevform, details, setDetails }) {
+function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
     const [renderReferee, setRenderReferee] = useState(null);
 
     const [referee, setReferee] = useState({
@@ -240,7 +240,7 @@ function Referee({ nextform, prevform, details, setDetails }) {
                         Prev
                     </button>
                     <div className="space-x-6">
-                        <button className="btn-outline" onClick="">
+                        <button className="btn-outline" onClick={saveInfo}>
                             Save
                         </button>
                         <button onClick={saveInfoNext} className="btn-secondary">

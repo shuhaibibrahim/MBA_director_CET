@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Books({ nextform, prevform, details, setDetails }) {
+function Books({ nextform, prevform, details, setDetails, saveInfo }) {
     const [books, setBooks] = useState({
         coauthors: "",
         title: "",
@@ -1428,7 +1428,7 @@ function Books({ nextform, prevform, details, setDetails }) {
                         Prev
                     </button>
                     <div className="space-x-6">
-                        <button className="btn-outline" onClick="">
+                        <button className="btn-outline" onClick={saveInfo}>
                             Save
                         </button>
                         <button onClick={saveInfoNext} className="btn-secondary">

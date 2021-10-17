@@ -1,6 +1,6 @@
 import React from "react";
 
-function Employment({ nextform, prevform, details, setDetails }) {
+function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
     function updateEmployment(e, prepost) {
         var newDetails = { ...details };
         newDetails[prepost][e.target.name] = e.target.value;
@@ -242,7 +242,7 @@ function Employment({ nextform, prevform, details, setDetails }) {
                         Prev
                     </button>
                     <div className="space-x-6">
-                        <button className="btn-outline" onClick="">
+                        <button className="btn-outline" onClick={saveInfo}>
                             Save
                         </button>
                         <button onClick={saveInfoNext} className="btn-secondary">
