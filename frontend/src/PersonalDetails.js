@@ -12,7 +12,7 @@ function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
         e.preventDefault();
         // var newDetails={...fullDetails,...personal}
         // setFullDetails(newDetails)
-        nextform();
+        nextform(e);
     }
 
     return (

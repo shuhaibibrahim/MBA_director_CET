@@ -194,8 +194,8 @@ export default function Form({ user, logout }) {
         })
     }
 
-    const nextform = () => {
-        saveInfo();
+    const nextform = (e) => {
+        saveInfo(e);
         setformno(formno + 1);
         scrollTop();
     };
