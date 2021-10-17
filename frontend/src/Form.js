@@ -124,7 +124,7 @@ export default function Form({ user, logout }) {
         formno:1
     });
 
-    const [formno, setformno] = useState(1);
+    const [formno, setformno] = useState(0);
 
     useEffect(() => {
         var dbRef = ref(db, "users/" + user.uid);
@@ -169,6 +169,10 @@ export default function Form({ user, logout }) {
                 //     ...arrayObj,
                 // });
             }
+            else
+            {
+                setformno(1)
+            }
         });
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -204,23 +208,21 @@ export default function Form({ user, logout }) {
     const nextform = (e) => {
         e.preventDefault();
         
-        setDetails({
-            ...details,
-            formno:formno+1
-        })
         setformno(formno + 1);
 
         set(ref(db, "users/" + user.uid), {
-            ...details
+            ...details,
+            formno:formno+1
         })
         scrollTop();
     };
     const prevform = () => {
-        setDetails({
+        setformno(formno - 1);
+
+        set(ref(db, "users/" + user.uid), {
             ...details,
             formno:formno-1
         })
-        setformno(formno - 1);
         scrollTop();
     };
 
