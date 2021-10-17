@@ -139,7 +139,7 @@ function Education({ nextform, prevform, details, setDetails, saveInfo }) {
                                     }}
                                 />
                             </div>
-                            <div className="form-field mt-4 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 sm:ml-2.5">
+                            <div className="form-field mt-4 sm:w-6/12 md:w-5/12 lg:w-4/12 xl:w-7/12 sm:ml-2.5">
                                 <label className="form-label mb-1" htmlFor="startdate">
                                     Start Date
                                 </label>

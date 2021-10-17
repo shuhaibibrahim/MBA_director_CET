@@ -193,7 +193,13 @@ export default function Form({ user, logout }) {
         set(ref(db, 'users/' + user.uid), {
             ...details,
             userSignInEmail:user.email
-        });
+        }).then(()=>{
+            alert("Saved successfully")
+            console.log("Saved successfully!")
+          }
+        ).catch(()=>{
+            alert("Couldnt save data!")
+        })
     }
 
     return (
