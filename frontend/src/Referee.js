@@ -15,7 +15,7 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
 
     const removeItem = (e, name, id) => {
         e.preventDefault();
-        console.log(id);
+        // console.log(id);
         var newDetails = { ...details };
         var newList = [...newDetails[name]];
         newList = newList.filter((item) => item.id !== id);
@@ -53,12 +53,24 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderReferee(
             details.referee.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.name}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.designation}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.organization}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.email}</div>
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.postaladdress}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.phoneno}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.name}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.designation}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.organization}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.email}
+                    </div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.postaladdress}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.phoneno}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {

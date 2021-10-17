@@ -55,7 +55,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
 
     const removeItem = (e, name, id) => {
         e.preventDefault();
-        console.log(id);
+        // console.log(id);
         var newDetails = { ...details };
         var newList = [...newDetails[name]];
         newList = newList.filter((item) => item.id !== id);
@@ -92,9 +92,15 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderAward(
             details.awards.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.org}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.year}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.org}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.year}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -112,10 +118,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderThesis(
             details.thesis.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.studentname}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.supervisor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.year}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.studentname}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.supervisor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.year}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -133,10 +147,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects1(
             details.projects1.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.sponsor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.years}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.amount}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -154,10 +176,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects2(
             details.projects2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.sponsor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.years}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.amount}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -175,10 +205,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects3(
             details.projects3.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.sponsor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.years}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.amount}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -196,10 +234,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects4(
             details.projects4.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.sponsor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.years}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.amount}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -217,10 +263,18 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects5(
             details.projects5.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.sponsor}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.years}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.amount}</div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.sponsor}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.years}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.amount}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -498,6 +552,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="thesisSupervised"
                                 name="thesisSupervised"
+                                value={details.thesisSupervised}
                                 onChange={update}
                             />
                         </div>
@@ -525,6 +580,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="sponsoredRD1"
                                 name="sponsoredRD1"
+                                value={details.sponsoredRD1}
                                 onChange={update}
                             />
                         </div>
@@ -659,6 +715,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="sponsoredRD2"
                                 name="sponsoredRD2"
+                                value={details.sponsoredRD2}
                                 onChange={update}
                             />
                         </div>
@@ -793,6 +850,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="sponsoredRD3"
                                 name="sponsoredRD3"
+                                value={details.sponsoredRD3}
                                 onChange={update}
                             />
                         </div>
@@ -927,6 +985,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="sponsoredRD4"
                                 name="sponsoredRD4"
+                                value={details.sponsoredRD4}
                                 onChange={update}
                             />
                         </div>
@@ -1061,6 +1120,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="sponsoredRD5"
                                 name="sponsoredRD5"
+                                value={details.sponsoredRD5}
                                 onChange={update}
                             />
                         </div>

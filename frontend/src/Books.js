@@ -70,11 +70,21 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderBooks(
             details.books.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.edition}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.publisher}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.date}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.edition}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -92,11 +102,21 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications1(
             details.publications1.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.edition}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.publisher}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.date}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.edition}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -114,14 +134,30 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications2(
             details.publications2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.journalname}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.volumeno}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.indexedin}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.journalname}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.publisher}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.volumeno}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.date}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.indexedin}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.pages}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -139,13 +175,27 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications3(
             details.publications3.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.journalname}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.publisher}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.volumeno}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.date}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.journalname}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.publisher}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.volumeno}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.date}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.pages}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -163,12 +213,24 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications4(
             details.publications4.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.conferencename}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.location}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.month}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.conferencename}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.location}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.month}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.pages}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -186,12 +248,24 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications5(
             details.publications5.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.title}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.coauthors}</div>
-                    <div className="w-3/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.conferencename}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.location}</div>
-                    <div className="w-2/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.month}</div>
-                    <div className="w-1/12 px-1.5 py-4 truncate text-sm text-gray-800">{item.pages}</div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.coauthors}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.conferencename}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.location}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.month}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.pages}
+                    </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
                         <button
                             onClick={(e) => {
@@ -211,7 +285,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
 
     const removeItem = (e, name, id) => {
         e.preventDefault();
-        console.log(id);
+        // console.log(id);
         var newDetails = { ...details };
         var newList = [...newDetails[name]];
         newList = newList.filter((item) => item.id !== id);
@@ -263,6 +337,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noBooks"
                                 name="noBooks"
+                                value={details.noBooks}
                                 onChange={update}
                             />
                         </div>
@@ -416,6 +491,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noPublished1"
                                 name="noPublished1"
+                                value={details.noPublished1}
                                 onChange={update}
                             />
                         </div>
@@ -581,6 +657,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noPublished2"
                                 name="noPublished2"
+                                value={details.noPublished2}
                                 onChange={update}
                             />
                         </div>
@@ -813,6 +890,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noPublished3"
                                 name="noPublished3"
+                                value={details.noPublished3}
                                 onChange={update}
                             />
                         </div>
@@ -1022,6 +1100,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noPublished4"
                                 name="noPublished4"
+                                value={details.noPublished4}
                                 onChange={update}
                             />
                         </div>
@@ -1230,6 +1309,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 type="number"
                                 id="noPublished5"
                                 name="noPublished5"
+                                value={details.noPublished5}
                                 onChange={update}
                             />
                         </div>

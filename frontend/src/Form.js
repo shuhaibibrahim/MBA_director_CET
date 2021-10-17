@@ -8,8 +8,8 @@ import Books from "./Books";
 import Patents from "./Patents";
 import Referee from "./Referee";
 import GeneratePDF from "./GeneratePDF";
-import { db } from './firebase_config'
-import { ref, set, onValue } from 'firebase/database'
+import { db } from "./firebase_config";
+import { ref, set, onValue } from "firebase/database";
 import AlreadySubmitted from "./AlreadySubmitted";
 
 export default function Form({ user, logout }) {
@@ -120,20 +120,18 @@ export default function Form({ user, logout }) {
         patents: [],
         filedPatents: [],
         referee: [],
-        formSubmitted:false
+        formSubmitted: false,
     });
 
     const [formno, setformno] = useState(1);
 
     useEffect(() => {
-        
-        var dbRef=ref(db,'users/' + user.uid)
+        var dbRef = ref(db, "users/" + user.uid);
 
         onValue(dbRef, (snapshot) => {
-            if(snapshot.exists())
-            {
-                var arrayObj={}
-                var arrNames=[
+            if (snapshot.exists()) {
+                var arrayObj = {};
+                var arrNames = [
                     "awards",
                     "thesis",
                     "projects1",
@@ -150,28 +148,27 @@ export default function Form({ user, logout }) {
                     "patents",
                     "filedPatents",
                     "referee",
-                ]
+                ];
 
-                for(var aname of arrNames)
-                {
-                    if(snapshot.val()[aname]==undefined)
-                        arrayObj[aname]=[]
+                for (var aname of arrNames) {
+                    if (snapshot.val()[aname] === undefined) arrayObj[aname] = [];
                 }
 
                 // console.log(arrayObj)
 
                 setDetails({
                     ...snapshot.val(),
-                    ...arrayObj
-                })
-                console.log({
-                    ...snapshot.val(),
-                    ...arrayObj
-                })
-            }   
+                    ...arrayObj,
+                });
+                // console.log({
+                //     ...snapshot.val(),
+                //     ...arrayObj,
+                // });
+            }
         });
 
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const scrollTop = () => {
         window.scrollTo({
@@ -180,22 +177,26 @@ export default function Form({ user, logout }) {
         });
     };
 
-    const saveInfo=(e)=>{
+    const saveInfo = (e) => {
         e.preventDefault();
-        set(ref(db, 'users/' + user.uid), {
+        set(ref(db, "users/" + user.uid), {
             ...details,
-            userSignInEmail:user.email
-        }).then(()=>{
-            alert("Saved successfully")
-            console.log("Saved successfully!")
-          }
-        ).catch(()=>{
-            alert("Couldnt save data!")
+            userSignInEmail: user.email,
         })
-    }
+            .then(() => {
+                alert("Saved successfully");
+            })
+            .catch(() => {
+                alert("Couldnt save data!");
+            });
+    };
 
     const nextform = (e) => {
-        saveInfo(e);
+        e.preventDefault();
+        set(ref(db, "users/" + user.uid), {
+            ...details,
+            userSignInEmail: user.email,
+        });
         setformno(formno + 1);
         scrollTop();
     };
@@ -206,35 +207,79 @@ export default function Form({ user, logout }) {
 
     return (
         <>
-            {details.formSubmitted
-                ?
-                    <AlreadySubmitted />
-                :
-                    <>
-                        <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
-                        {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} saveInfo={saveInfo} />}
-                        {formno === 2 && (
-                            <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
-                        {formno === 3 && (
-                            <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
-                        {formno === 4 && (
-                            <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
-                        {formno === 5 && (
-                            <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
-                        {formno === 6 && (
-                            <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
-                        {formno === 7 && (
-                            <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-                        )}
+            {details.formSubmitted ? (
+                <AlreadySubmitted />
+            ) : (
+                <>
+                    <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
+                    {formno === 1 && (
+                        <PersonalDetails
+                            nextform={nextform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 2 && (
+                        <Education
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 3 && (
+                        <Employment
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 4 && (
+                        <Awards
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 5 && (
+                        <Books
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 6 && (
+                        <Patents
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
+                    {formno === 7 && (
+                        <Referee
+                            nextform={nextform}
+                            prevform={prevform}
+                            details={details}
+                            setDetails={setDetails}
+                            saveInfo={saveInfo}
+                        />
+                    )}
 
-                        {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}
-                    </>
-            }
+                    {formno === 8 && (
+                        <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />
+                    )}
+                </>
+            )}
         </>
     );
 }
