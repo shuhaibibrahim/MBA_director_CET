@@ -10,6 +10,7 @@ import Referee from "./Referee";
 import GeneratePDF from "./GeneratePDF";
 import { db } from './firebase_config'
 import { ref, set, onValue } from 'firebase/database'
+import AlreadySubmitted from "./AlreadySubmitted";
 
 export default function Form({ user, logout }) {
     const personal = {
@@ -205,28 +206,35 @@ export default function Form({ user, logout }) {
 
     return (
         <>
-            <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
-            {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} saveInfo={saveInfo} />}
-            {formno === 2 && (
-                <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
-            {formno === 3 && (
-                <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
-            {formno === 4 && (
-                <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
-            {formno === 5 && (
-                <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
-            {formno === 6 && (
-                <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
-            {formno === 7 && (
-                <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
-            )}
+            {details.formSubmitted
+                ?
+                    <AlreadySubmitted />
+                :
+                    <>
+                        <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
+                        {formno === 1 && <PersonalDetails nextform={nextform} details={details} setDetails={setDetails} saveInfo={saveInfo} />}
+                        {formno === 2 && (
+                            <Education nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
+                        {formno === 3 && (
+                            <Employment nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
+                        {formno === 4 && (
+                            <Awards nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
+                        {formno === 5 && (
+                            <Books nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
+                        {formno === 6 && (
+                            <Patents nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
+                        {formno === 7 && (
+                            <Referee nextform={nextform} prevform={prevform} details={details} setDetails={setDetails} saveInfo={saveInfo} />
+                        )}
 
-            {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}
+                        {formno === 8 && <GeneratePDF scrollTop={scrollTop} setformno={setformno} details={details} user={user} />}
+                    </>
+            }
         </>
     );
 }
