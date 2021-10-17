@@ -203,8 +203,13 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
                                 onClick={(e) => {
                                     addToList(e, "referee", referee);
                                     setReferee({
-                                        ...referee,
-                                        id: details.referee.length,
+                                        name: "",
+                                        designation: "",
+                                        organization: "",
+                                        email: "",
+                                        postaladdress: "",
+                                        phoneno: "",
+                                        id: 0,
                                     });
                                 }}
                                 className="btn"
