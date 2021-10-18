@@ -127,6 +127,7 @@ export default function Form({ user, logout }) {
         referee: [],
         formSubmitted: false,
         formno: 1,
+        check:false
     });
 
     const [formno, setformno] = useState(0);

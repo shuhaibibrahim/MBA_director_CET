@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import { db } from "./firebase_config";
 import { ref, set } from "firebase/database";
@@ -6,14 +6,25 @@ import TitleSVG from "./TitleSVG";
 
 function GeneratePDF({ details, setformno, scrollTop, user }) {
     const pdfExportComponent = React.useRef(null);
+    const [checkError, setCheckError] = useState(false)
+    const [check, setCheck] = useState(false)
 
     const pushToDatabase = () => {
         // console.log(user);
-        set(ref(db, "users/" + user.uid), {
-            ...details,
-            userSignInEmail: user.email,
-            formSubmitted: true,
-        });
+        if(check===true)
+        {
+            set(ref(db, "users/" + user.uid), {
+                ...details,
+                userSignInEmail: user.email,
+                formSubmitted: true,
+                check:true
+            });
+        }
+        else
+        {
+            setCheckError(true)
+            alert("Please check the declaration")
+        }
     };
 
     return (
@@ -1186,7 +1197,26 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         <></>
                     )}
                 </PDFExport>
+
+                <div className="form-field mt-4 ml-10 sm:mr-2.5 rounded-;g">
+                    <input
+                        type="checkbox"
+                        id="check"
+                        name="check"
+                        className={checkError?"ring-red-600 ring-2 rounded":""}
+                        onClick={(e)=>{
+                            // console.log(e.target.checked)
+                            setCheck(e.target.checked)
+                            if(e.target.checked===true)
+                                setCheckError(false)
+                        }}
+                    />
+                    <label htmlFor="check" className="ml-3 font-medium text-gray-600">
+                    I confirm that the information provided by me in this application form is complete and accurate.
+                    </label>
+                </div>
             </div>
+
             <div className="flex justify-center space-x-6 mb-10">
                 <button
                     className="btn-outline"
