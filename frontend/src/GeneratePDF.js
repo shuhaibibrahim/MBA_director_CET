@@ -2,6 +2,7 @@ import React from "react";
 import { PDFExport } from "@progress/kendo-react-pdf";
 import { db } from "./firebase_config";
 import { ref, set } from "firebase/database";
+import TitleSVG from "./TitleSVG";
 
 function GeneratePDF({ details, setformno, scrollTop, user }) {
     const pdfExportComponent = React.useRef(null);
@@ -17,10 +18,18 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
 
     return (
         <>
-            <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
-            <h2 className="text-center mt-1 font-bold text-gray-500">Review your application</h2>
+            <h2 className="text-center mt-5 font-bold text-gray-500">Review your application</h2>
             <div className="w-11/12 md:w-9/12 mx-auto my-8 bg-white shadow-md rounded-xl pb-2">
-                <PDFExport paperSize="A4" scale={0.6} margin="1.3cm" ref={pdfExportComponent}>
+                <PDFExport paperSize="A4" scale={0.6} margin="1.3cm" ref={pdfExportComponent} fileName="CET_MBA_DIRECTOR_APPLICATION">
+                    <header className="bg-white shadow-md py-4">
+                        <div className="w-full ml-10 m-auto flex justify-between items-center">
+                            <div className="w-64">
+                                <TitleSVG />
+                            </div>
+                        </div>
+                        <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
+                    </header>
+
                     <dl className="review-section">
                         <h3 className="text-3xl text-secondary">Personal Details</h3>
                         <hr className="mt-3 mb-4" />
@@ -1196,10 +1205,18 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                 <button
                     className="btn-secondary"
                     onClick={() => {
-                        pushToDatabase();
                         if (pdfExportComponent.current) {
                             pdfExportComponent.current.save();
                         }
+                    }}
+                >
+                    Generate PDF
+                </button>
+
+                <button
+                    className="btn-secondary"
+                    onClick={() => {
+                        pushToDatabase();
                     }}
                 >
                     Submit

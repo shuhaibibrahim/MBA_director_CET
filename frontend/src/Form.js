@@ -76,9 +76,14 @@ export default function Form({ user, logout }) {
         enddate: "",
     };
 
+    // const employment = {
+    //     prephd: { ...empdetails },
+    //     postphd: { ...empdetails },
+    // };
+
     const employment = {
-        prephd: { ...empdetails },
-        postphd: { ...empdetails },
+        prephd: [],
+        postphd: []
     };
 
     //final state
@@ -133,6 +138,8 @@ export default function Form({ user, logout }) {
             if (snapshot.exists()) {
                 var arrayObj = {};
                 var arrNames = [
+                    "postphd",
+                    "prephd",
                     "awards",
                     "thesis",
                     "projects1",

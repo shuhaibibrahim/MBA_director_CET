@@ -1,10 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
-    function updateEmployment(e, prepost) {
+    const empdetails = {
+        employer: "",
+        department: "",
+        position: "",
+        nature: "",
+        startdate: "",
+        enddate: "",
+        id:0
+    };
+
+    const [pre, setPre] = useState({...empdetails}) //postphd
+    const [post, setPost] = useState({...empdetails}) //prephd
+
+    const [renderPostPhd, setRenderPostPhd] = useState(null)
+    const [renderPrePhd, setRenderPrePhd] = useState(null)
+
+    const removeItem = (e, name, id) => {
+        e.preventDefault();
+        // console.log(id);
         var newDetails = { ...details };
-        newDetails[prepost][e.target.name] = e.target.value;
+        var newList = [...newDetails[name]];
+        newList = newList.filter((item) => item.id !== id);
+        newDetails[name] = newList;
         setDetails(newDetails);
+    };
+
+    const addToList = (e, name, item) => {
+        console.log(item)
+        e.preventDefault();
+        var newDetails = { ...details };
+        item.id = newDetails[name].length + 1; //generate ID
+        // console.log(name, item)
+        newDetails[name].push(item);
+        setDetails(newDetails);
+    };
+
+
+    function updateEmployment(e, prepost) {
+        // var newDetails = { ...details };
+        // newDetails[prepost][e.target.name] = e.target.value;
+        // setDetails(newDetails);
+        console.log(prepost)
+        if(prepost==="postphd")
+        {
+            var newPost={...post}
+            newPost[e.target.name]=e.target.value
+            setPost(newPost)
+            // console.log(post)
+        }
+        else if(prepost==="prephd")
+        {
+            var newPre={...pre}
+            newPre[e.target.name]=e.target.value
+            setPre(newPre)
+            // console.log(newPre)
+        }
     }
 
     const saveInfoNext = (e) => {
@@ -16,6 +68,80 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
         e.preventDefault();
         prevform(e);
     };
+
+    useEffect(() => {
+        setRenderPostPhd(
+            details.postphd.map((item) => (
+                <div key={item.id} className="flex">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.employer}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.department}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.position}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.nature}
+                    </div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.startdate}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.enddate}
+                    </div>
+                    <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
+                        <button
+                            onClick={(e) => {
+                                removeItem(e, "postphd", item.id);
+                            }}
+                            className="text-secondary hover:text-secondary-dark transition"
+                        >
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            ))
+        )
+
+        // console.log(details.postphd)
+
+        setRenderPrePhd(
+            details.prephd.map((item) => (
+                <div key={item.id} className="flex">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.employer}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.department}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.position}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.nature}
+                    </div>
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.startdate}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.enddate}
+                    </div>
+                    <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
+                        <button
+                            onClick={(e) => {
+                                removeItem(e, "prephd", item.id);
+                            }}
+                            className="text-secondary hover:text-secondary-dark transition"
+                        >
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            ))
+        )
+    }, [details])
 
     return (
         <div className="w-11/12 md:w-9/12 mx-auto my-6">
@@ -39,7 +165,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="employer"
                                     name="employer"
-                                    value={details.postphd.employer}
+                                    value={post.employer}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
@@ -54,7 +180,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="department"
                                     name="department"
-                                    value={details.postphd.department}
+                                    value={post.department}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
@@ -72,7 +198,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="position"
                                     name="position"
-                                    value={details.postphd.position}
+                                    value={post.position}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
@@ -87,7 +213,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="nature"
                                     name="nature"
-                                    value={details.postphd.nature}
+                                    value={post.nature}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
@@ -105,7 +231,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="date"
                                     id="startdate"
                                     name="startdate"
-                                    value={details.postphd.startdate}
+                                    value={post.startdate}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
@@ -120,13 +246,60 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="date"
                                     id="enddate"
                                     name="enddate"
-                                    value={details.postphd.enddate}
+                                    value={post.enddate}
                                     onChange={(e) => {
                                         updateEmployment(e, "postphd");
                                     }}
                                 />
                             </div>
                         </div>
+
+                        <div className="text-right mt-5">
+                            <button
+                                onClick={(e) => {
+                                    addToList(e, "postphd", post);
+                                    setPost({
+                                        ...empdetails
+                                    });
+                                }}
+                                className="btn"
+                            >
+                                Add to list
+                            </button>
+                        </div>
+
+                        {details.postphd.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
+                                <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Employer
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Department/Division
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Position held
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Nature of Work
+                                    </div>
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Start Date
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        End Date
+                                    </div>
+                                    <div className="w-rem w-1/12 py-3">
+                                        <span className="sr-only">Remove</span>
+                                    </div>
+                                </div>
+                                <div className="px-2.5 min-w-200 bg-white divide-y divide-gray-200">
+                                    {renderPostPhd}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
@@ -146,7 +319,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="employer"
                                     name="employer"
-                                    value={details.prephd.employer}
+                                    value={pre.employer}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
@@ -161,7 +334,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="department"
                                     name="department"
-                                    value={details.prephd.department}
+                                    value={pre.department}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
@@ -179,7 +352,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="position"
                                     name="position"
-                                    value={details.prephd.position}
+                                    value={pre.position}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
@@ -194,7 +367,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="text"
                                     id="nature"
                                     name="nature"
-                                    value={details.prephd.nature}
+                                    value={pre.nature}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
@@ -212,7 +385,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="date"
                                     id="startdate"
                                     name="startdate"
-                                    value={details.prephd.startdate}
+                                    value={pre.startdate}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
@@ -227,13 +400,60 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     type="date"
                                     id="enddate"
                                     name="enddate"
-                                    value={details.prephd.enddate}
+                                    value={pre.enddate}
                                     onChange={(e) => {
                                         updateEmployment(e, "prephd");
                                     }}
                                 />
                             </div>
                         </div>
+
+                        <div className="text-right mt-5">
+                            <button
+                                onClick={(e) => {
+                                    addToList(e, "prephd", pre);
+                                    setPre({
+                                        ...empdetails
+                                    });
+                                }}
+                                className="btn"
+                            >
+                                Add to list
+                            </button>
+                        </div>
+
+                        {details.prephd.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
+                                <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Employer
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Department/Division
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Position held
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Nature of Work
+                                    </div>
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Start Date
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        End Date
+                                    </div>
+                                    <div className="w-rem w-1/12 py-3">
+                                        <span className="sr-only">Remove</span>
+                                    </div>
+                                </div>
+                                <div className="px-2.5 min-w-200 bg-white divide-y divide-gray-200">
+                                    {renderPrePhd}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
                     </div>
                 </div>
 
