@@ -53,6 +53,9 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderReferee(
             details.referee.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.name}
                     </div>
@@ -96,7 +99,7 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
             <form className="mt-7 mb-4">
                 <div className="sm:flex justify-between">
                     <h4 className="sm:w-2/6 font-bold text-gray-600 pr-2 pt-4 pb-2">
-                        Note: Referees should not be friends/relatives, but strictly professional
+                        Note: Referees should not be friends/relatives, but strictly professional. Please specify the names of three referees.
                     </h4>
                     <div className="form-card rounded-xl ">
                         <div className="form-field sm:w-6/12 md:w-7/12 lg:w-8/12 xl:w-9/12 sm:mr-2.5">
@@ -220,6 +223,9 @@ function Referee({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.referee.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Name
                                     </div>

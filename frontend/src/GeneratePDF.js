@@ -288,44 +288,124 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         <h4>
                             Post-PhD employment details (from date thesis is approved till today in chronological order)
                         </h4>
-                        <p>
-                            <dt>Employer</dt> <dd>{details.postphd.employer}</dd>
-                        </p>
-                        <p>
-                            <dt>Department/Division</dt> <dd>{details.postphd.department}</dd>
-                        </p>
-                        <p>
-                            <dt>Position held</dt> <dd>{details.postphd.position}</dd>
-                        </p>
-                        <p>
-                            <dt>Nature of Work</dt> <dd>{details.postphd.nature}</dd>
-                        </p>
-                        <p>
-                            <dt>Start Date</dt> <dd>{details.postphd.startdate}</dd>
-                        </p>
-                        <p>
-                            <dt>End Date</dt> <dd>{details.postphd.enddate}</dd>
-                        </p>
+        
+                        {details.postphd.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
+                                <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Employer
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Department/Division
+                                    </div>
 
-                        <h4>Pre-PhD employment details (Post-BTech/Msc/MCA till date of joining PhD Programme)</h4>
-                        <p>
-                            <dt>Employer</dt> <dd>{details.prephd.employer}</dd>
-                        </p>
-                        <p>
-                            <dt>Department/Division</dt> <dd>{details.prephd.department}</dd>
-                        </p>
-                        <p>
-                            <dt>Position held</dt> <dd>{details.prephd.position}</dd>
-                        </p>
-                        <p>
-                            <dt>Nature of Work</dt> <dd>{details.prephd.nature}</dd>
-                        </p>
-                        <p>
-                            <dt>Start Date</dt> <dd>{details.prephd.startdate}</dd>
-                        </p>
-                        <p>
-                            <dt>End Date</dt> <dd>{details.prephd.enddate}</dd>
-                        </p>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Position held
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Nature of Work
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Start Date
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        End Date
+                                    </div>
+                                </div>
+                                <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
+                                    {details.postphd.map((item) => (
+                                        <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.employer}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.department}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.position}
+                                            </div>
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.nature}
+                                            </div>
+                                            <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.startdate}
+                                            </div>
+                                            <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.enddate}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
+
+                        <h4>Pre-PhD employment details (Post-BTech/BE/MTech/ME/M.Com/MBA/Msc./MCA till date of joining PhD Programme)</h4>
+                        {details.prephd.length !== 0 ? (
+                            <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
+                                <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Employer
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Department/Division
+                                    </div>
+
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Position held
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Nature of Work
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Start Date
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        End Date
+                                    </div>
+                                </div>
+                                <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
+                                    {details.prephd.map((item) => (
+                                        <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.employer}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.department}
+                                            </div>
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.position}
+                                            </div>
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.nature}
+                                            </div>
+                                            <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.startdate}
+                                            </div>
+                                            <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.enddate}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
+                        
                     </dl>
 
                     <dl className="review-section">
@@ -335,6 +415,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.awards.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-5/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Award Title
                                     </div>
@@ -349,6 +432,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.awards.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-5/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -380,6 +466,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Student Name
                                     </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
@@ -396,6 +485,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.thesis.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.studentname}
                                             </div>
@@ -437,6 +529,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.projects1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -454,6 +549,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.projects1.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -485,6 +583,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.projects2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -502,6 +603,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.projects2.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -533,6 +637,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.projects3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -550,6 +657,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.projects3.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -581,6 +691,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.projects4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -598,6 +711,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.projects4.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -629,6 +745,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.projects5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -646,6 +765,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.projects5.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -679,6 +801,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.books.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -699,6 +824,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.books.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -730,6 +858,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.publications1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -750,6 +881,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.publications1.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -781,6 +915,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.publications2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -810,6 +947,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.publications2.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -850,6 +990,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.publications3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -876,6 +1019,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.publications3.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -915,6 +1061,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.publications4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -939,6 +1088,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.publications4.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -975,6 +1127,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.publications5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -999,6 +1154,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.publications5.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -1037,6 +1195,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.patents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -1059,6 +1220,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.patents.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -1093,6 +1257,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                         {details.filedPatents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Title
                                     </div>
@@ -1115,6 +1282,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.filedPatents.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.title}
                                             </div>
@@ -1148,6 +1318,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                             <hr className="mt-3 mb-4" />
                             <div className="overflow-auto divide-y divide-gray-200 my-6 rounded-md">
                                 <div className="px-2.5 w-full bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Name
                                     </div>
@@ -1170,6 +1343,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <div className="px-2.5 w-full bg-gray-50 divide-y divide-gray-200">
                                     {details.referee.map((item) => (
                                         <div key={item.id} className="flex">
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.id}
+                                            </div>
                                             <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.name}
                                             </div>

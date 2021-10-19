@@ -92,7 +92,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderAward(
             details.awards.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -118,16 +121,19 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderThesis(
             details.thesis.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
-                        {item.studentname}
-                    </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
-                        {item.title}
-                    </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
-                        {item.supervisor}
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
                     </div>
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.studentname}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.title}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.supervisor}
+                    </div>
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.year}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -147,7 +153,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects1(
             details.projects1.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -156,7 +165,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.years}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.amount}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -176,7 +185,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects2(
             details.projects2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -185,7 +197,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.years}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.amount}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -205,7 +217,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects3(
             details.projects3.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -214,7 +229,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.years}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.amount}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -234,7 +249,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects4(
             details.projects4.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -243,7 +261,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.years}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.amount}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -263,7 +281,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderProjects5(
             details.projects5.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -272,7 +293,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.years}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.amount}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -368,7 +389,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.awards.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Award Title
                                     </div>
                                     <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -513,17 +537,20 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.thesis.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Student Name
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Thesis Title
                                     </div>
 
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Supervisor
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Year Successfully Defended
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -673,7 +700,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.projects1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -683,7 +713,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Duration
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Grant Amount
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -808,7 +838,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.projects2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -818,7 +851,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Duration
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Grant Amount
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -943,7 +976,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.projects3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -953,7 +989,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Duration
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Grant Amount
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -1078,7 +1114,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.projects4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -1088,7 +1127,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Duration
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Grant Amount
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -1212,7 +1251,10 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.projects5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -1222,7 +1264,7 @@ function Awards({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Duration
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Grant Amount
                                     </div>
                                     <div className="w-rem w-1/12 py-3">

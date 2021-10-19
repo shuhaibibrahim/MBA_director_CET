@@ -61,7 +61,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPatent(
             details.patents.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -73,10 +76,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.patentAuthority}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.organizationAssignedTo}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.datePublished}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -96,7 +99,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderFiledPatents(
             details.filedPatents.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -108,10 +114,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.patentAuthority}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.organizationAssignedTo}
                     </div>
-                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.datePublished}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -280,7 +286,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.patents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -292,10 +301,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent Authority
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 ">
                                         Organization
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-0 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -453,7 +462,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.filedPatents.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -465,10 +477,10 @@ function Patents({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Patent Authority
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 ">
                                         Organization
                                     </div>
-                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-0 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
                                     <div className="w-rem w-1/12 py-3">

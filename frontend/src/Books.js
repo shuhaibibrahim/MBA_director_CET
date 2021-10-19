@@ -25,7 +25,8 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         volumeno: "",
         pages: "",
         date: "",
-        indexedin: "",
+        indexedin: "SCI",
+        impactFactor:"",
         id: 0,
     });
     const [publications3, setPublications3] = useState({
@@ -70,6 +71,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderBooks(
             details.books.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
@@ -82,7 +86,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.date}
                     </div>
-                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.edition}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -102,6 +106,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications1(
             details.publications1.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
@@ -114,7 +121,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.date}
                     </div>
-                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.edition}
                     </div>
                     <div className="w-rem w-1/12 py-4 truncate text-center text-sm font-medium">
@@ -134,19 +141,22 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications2(
             details.publications2.map((item) => (
                 <div key={item.id} className="flex">
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.coauthors}
                     </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.journalname}
                     </div>
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.publisher}
                     </div>
-                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.volumeno}
                     </div>
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -154,6 +164,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                     </div>
                     <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.indexedin}
+                    </div>
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.impactFactor}
                     </div>
                     <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.pages}
@@ -175,6 +188,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications3(
             details.publications3.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
@@ -213,6 +229,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications4(
             details.publications4.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
@@ -248,6 +267,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPublications5(
             details.publications5.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.title}
                     </div>
@@ -451,6 +473,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.books.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
@@ -464,7 +489,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Edition
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -615,6 +640,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications1.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-120 bg-gray-100 flex">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
@@ -628,7 +656,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Date
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Edition
                                     </div>
                                     <div className="w-rem w-1/12 py-3">
@@ -799,19 +827,41 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 <label className="form-label mb-1" htmlFor="indexedin">
                                     Indexed in
                                 </label>
-                                <input
+                                <select 
                                     className="form-control w-full"
-                                    type="date"
+                                    name="indexedin" 
                                     id="indexedin"
-                                    name="indexedin"
                                     value={publications2.indexedin}
                                     onChange={(e) => {
                                         setPublications2({
                                             ...publications2,
                                             indexedin: e.target.value,
                                         });
-                                    }}
-                                />
+                                    }}>
+                                    <option value="SCI">SCI</option>
+                                    <option value="SCOPUS">SCOPUS</option>
+                                    <option value="SSCI">SSCI</option>
+                                    <option value="UGC">UGC</option>
+                                    <option value="AICTE">AICTE</option>
+                                </select>
+                                </div>
+                                <div className="form-field mt-4 sm:w-5/12 md:w-4/12 sm:ml-2.5">
+                                <label className="form-label mb-1" htmlFor="impactFactor">
+                                    Impact Factor
+                                </label>
+                                <input
+                                    className="form-control w-full"
+                                    type="text"
+                                    name="impactFactor" 
+                                    id="impactFactor"
+                                    value={publications2.impactFactor}
+                                    onChange={(e) => {
+                                        setPublications2({
+                                            ...publications2,
+                                            impactFactor: e.target.value,
+                                        });
+                                    }}>
+                                </input>
                             </div>
                         </div>
 
@@ -839,20 +889,23 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications2.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Co-authors
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Journal Name
                                     </div>
 
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Publisher
                                     </div>
-                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Volume
                                     </div>
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -860,6 +913,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                     </div>
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Indexed In
+                                    </div>
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Impact Factor
                                     </div>
                                     <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Pages
@@ -1052,6 +1108,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications3.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
@@ -1260,6 +1319,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications4.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>
@@ -1469,6 +1531,9 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.publications5.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-160 bg-gray-100 flex">
+                                    <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Title
                                     </div>

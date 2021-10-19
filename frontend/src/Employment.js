@@ -73,10 +73,13 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPostPhd(
             details.postphd.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.employer}
                     </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.department}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -85,7 +88,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.nature}
                     </div>
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.startdate}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -110,10 +113,13 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
         setRenderPrePhd(
             details.prephd.map((item) => (
                 <div key={item.id} className="flex">
+                    <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                        {item.id}
+                    </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.employer}
                     </div>
-                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.department}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -122,7 +128,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.nature}
                     </div>
-                    <div className="w-4/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                    <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                         {item.startdate}
                     </div>
                     <div className="w-3/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
@@ -271,10 +277,13 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.postphd.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Employer
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Department/Division
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -283,7 +292,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Nature of Work
                                     </div>
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Start Date
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -305,7 +314,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
 
                 <div className="sm:flex justify-between">
                     <h3 className="section-label pr-2">
-                        Pre-PhD employment details (Post-BTech / Msc / MCA till date of joining PhD Programme)
+                        Pre-PhD employment details (Post-BTech / BE / M.Tech / MBA / M.Com / Msc / MCA till date of joining PhD Programme)
                     </h3>
 
                     <div className="form-card rounded-xl sm:rounded-tl-none sm:rounded-tr-none">
@@ -425,10 +434,13 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                         {details.prephd.length !== 0 ? (
                             <div className="overflow-auto divide-y divide-gray-200 mt-5 rounded">
                                 <div className="px-2.5 min-w-200 bg-gray-100 flex">
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                        Sl.No
+                                    </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Employer
                                     </div>
-                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Department/Division
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
@@ -437,7 +449,7 @@ function Employment({ nextform, prevform, details, setDetails, saveInfo }) {
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Nature of Work
                                     </div>
-                                    <div className="w-4/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
+                                    <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">
                                         Start Date
                                     </div>
                                     <div className="w-3/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600 truncate">

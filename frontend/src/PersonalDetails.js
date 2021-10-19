@@ -233,7 +233,7 @@ function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
                             </label>
                             <textarea
                                 className="form-control w-full h-24"
-                                placeholder="Include 2 to 3 sentences"
+                                placeholder="Include 3 to 4 sentences"
                                 type="text"
                                 id="tr"
                                 name="tr"
