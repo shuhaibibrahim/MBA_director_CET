@@ -940,6 +940,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                     <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Indexed In
                                     </div>
+                                    <div className="w-2/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
+                                        Impact Factor
+                                    </div>
                                     <div className="w-1/12 px-1.5 py-3 text-left text-xs font-medium text-gray-600">
                                         Pages
                                     </div>
@@ -970,6 +973,9 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                             </div>
                                             <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.indexedin}
+                                            </div>
+                                            <div className="w-2/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
+                                                {item.impactFactor}
                                             </div>
                                             <div className="w-1/12 px-1.5 py-4 overflow-hidden overflow-ellipsis break-all text-sm text-gray-800">
                                                 {item.pages}
