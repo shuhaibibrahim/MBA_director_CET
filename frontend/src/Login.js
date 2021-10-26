@@ -24,8 +24,9 @@ function Login({ setUser, onBoarding, setOnBoarding, hasAccount, setHasAccount }
             {onBoarding ? (
                 <div className="flex-75 flex justify-center items-center">
                     <div className="text-center h-fit">
-                        <h2 className="text-3xl font-light text-gray-500 mb-2">CET School of Management is inviting</h2>
-                        <h1 className="text-5xl font-semibold text-tertiary mb-8">Application for MBA Director</h1>
+                        <h2 className="text-3xl font-light text-gray-500 mb-2">College of Engineering Trivandrum is inviting</h2>
+                        <h1 className="text-3xl font-semibold text-tertiary mb-8">Application for the post of Director, CET School of Management</h1>
+                        
                         <button className="btn-lg" onClick={() => setOnBoarding(!onBoarding)}>
                             Apply Now
                         </button>

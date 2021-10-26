@@ -3,6 +3,7 @@ import { PDFExport } from "@progress/kendo-react-pdf";
 import { db } from "./firebase_config";
 import { ref, set } from "firebase/database";
 import TitleSVG from "./TitleSVG";
+import axios from 'axios'
 
 function GeneratePDF({ details, setformno, scrollTop, user }) {
     const pdfExportComponent = React.useRef(null);
@@ -13,12 +14,22 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
         // console.log(user);
         if(check===true)
         {
+
             set(ref(db, "users/" + user.uid), {
                 ...details,
                 userSignInEmail: user.email,
                 formSubmitted: true,
                 check:true
-            });
+            })
+            .then(()=>{
+                axios.get(`http://localhost:8080/mailer?email=${details.email}`)
+                .then(()=>{
+                    console.log("Email sent")
+                })
+            })
+            .catch((error)=>{
+                console.err(error)
+            })
         }
         else
         {
@@ -38,7 +49,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                                 <TitleSVG />
                             </div>
                         </div>
-                        <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for MBA Director</h1>
+                        <h1 className="text-4xl text-tertiary font-light mt-8 text-center">Application for the post of Director, CETSOM</h1>
                     </header>
 
                     <dl className="review-section">
@@ -1429,6 +1440,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                     className="btn-secondary"
                     onClick={() => {
                         pushToDatabase();
+        
                     }}
                 >
                     Submit

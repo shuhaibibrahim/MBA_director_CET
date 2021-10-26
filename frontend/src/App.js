@@ -3,7 +3,14 @@ import "./App.css";
 import TitleSVG from "./TitleSVG";
 import Form from "./Form";
 import Login from "./Login";
+// import AdminLogin from "./AdminLogin";
 import { auth } from "./firebase_config";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 export default function App() {
     const [onBoarding, setOnBoarding] = useState(true);
@@ -28,6 +35,9 @@ export default function App() {
     };
 
     return (
+        <Router>
+        <Switch>
+        <Route path="/">
         <div className="App bg-gray-100 min-h-screen flex flex-col">
             <header className="bg-white shadow-md py-4">
                 <div className="w-11/12 md:w-9/12 m-auto flex justify-between items-center">
@@ -82,5 +92,11 @@ export default function App() {
                 />
             )}
         </div>
+        </Route>
+        <Route path="/admin">
+            {/* <AdminLogin/> */}
+        </Route>
+        </Switch>
+        </Router>
     );
 }
