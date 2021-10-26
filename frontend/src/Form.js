@@ -243,7 +243,7 @@ export default function Form({ user, logout }) {
                     ) : (
                         <>
                             <h1 className="text-4xl text-tertiary font-light mt-8 text-center">
-                                Application for MBA Director
+                                Application for the post of Director, CETSOM
                             </h1>
                             <div className="strip">
                                 <div className={formno === 1 ? "text-gray-600" : "text-gray-400"}>

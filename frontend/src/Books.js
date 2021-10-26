@@ -37,6 +37,7 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
         volumeno: "",
         pages: "",
         date: "",
+        impactFactor:"",
         id: 0,
     });
     const [publications4, setPublications4] = useState({
@@ -1081,6 +1082,22 @@ function Books({ nextform, prevform, details, setDetails, saveInfo }) {
                                 value={publications3.date}
                                 onChange={(e) => {
                                     setPublications3({ ...publications3, date: e.target.value });
+                                }}
+                            />
+                        </div>
+
+                        <div className="form-field mt-4">
+                            <label className="form-label mb-1" htmlFor="impactFactor">
+                                Impact Factor
+                            </label>
+                            <input
+                                className="form-control"
+                                type="text"
+                                id="impactFactor"
+                                name="impactFactor"
+                                value={publications3.impactFactor}
+                                onChange={(e) => {
+                                    setPublications3({ ...publications3, impactFactor: e.target.value });
                                 }}
                             />
                         </div>
