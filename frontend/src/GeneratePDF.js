@@ -22,7 +22,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                 check:true
             })
             .then(()=>{
-                axios.get(`http://localhost:8080/mailer?email=${details.email}`)
+                axios.get(`https://cetsomapp.herokuapp.com/mailer?email=${details.email}`)
                 .then(()=>{
                     console.log("Email sent")
                 })
