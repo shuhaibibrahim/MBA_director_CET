@@ -120,7 +120,7 @@ function GeneratePDF({ details, setformno, scrollTop, user }) {
                     <dl className="review-section">
                         <h3 className="text-3xl text-secondary">Education</h3>
                         <hr className="mt-3 mb-4" />
-                        <h4>PhD/MD degree</h4>
+                        <h4>PhD degree</h4>
                         <p>
                             <dt>Degree Name</dt> <dd>{details.phd.degree}</dd>
                         </p>

@@ -23,7 +23,7 @@ function Education({ nextform, prevform, details, setDetails, saveInfo }) {
 
             <form className="mt-7 mb-4">
                 <div className="sm:flex justify-between">
-                    <h3 className="section-label pr-2">PhD / MD degree</h3>
+                    <h3 className="section-label pr-2">PhD degree</h3>
                     <div className="form-card rounded-xl sm:rounded-bl-none sm:rounded-br-none">
                         <div className="sm:flex">
                             <div className="form-field sm:w-4/12 sm:mr-2.5">
