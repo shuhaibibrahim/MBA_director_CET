@@ -100,10 +100,10 @@ function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
                                 <label className="form-label mb-1" htmlFor="gender">
                                     Gender
                                 </label>
-                                <select className="form-control" name="gender" id="gender" onChange={updatePersonal}>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="others">Others</option>
+                                <select className="form-control" name="gender" id="gender" value={details.gender} onChange={updatePersonal}>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
                                 </select>
                             </div>
                             <div className="form-field mt-4 flex-1 sm:ml-2.5">
@@ -233,7 +233,7 @@ function PersonalDetails({ nextform, details, setDetails, saveInfo }) {
                             </label>
                             <textarea
                                 className="form-control w-full h-24"
-                                placeholder="Include 3 to 4 sentences"
+                                placeholder="Include 2 to 3 sentences"
                                 type="text"
                                 id="tr"
                                 name="tr"
