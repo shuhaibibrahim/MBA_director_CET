@@ -16,11 +16,17 @@ module.exports = {
                     DEFAULT: "#875A70",
                     dark: "#774A60",
                 },
+                
             },
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundColor: ['even','odd','last'],
+            textColor: ['even','odd'],
+            dropShadow: ['hover', 'focus'],
+        },
+        
     },
     plugins: [],
 };
