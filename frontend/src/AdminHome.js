@@ -111,7 +111,7 @@ function AdminHome() {
 
     return (
         <div className="h-full w-full flex flex-col items-center justify-center mt-9 mb-12">
-            <div className={download?"w-full":"hidden"}>
+            {/* <div className={download?"w-full":"hidden"}>
                 <PDFExport paperSize="A4" scale={0.6} margin="1.3cm" ref={pdfExportComponent}>
                 <div className="h-full w-full flex flex-col items-center justify-center mt-12">
                     <table className="table-auto w-full border-2 border-collapse rounded-xl drop-shadow-2xl">
@@ -142,21 +142,21 @@ function AdminHome() {
                     </table>
                 </div>
                 </PDFExport>
-            </div>
-
+            </div> */}
             <div className="flex flex-row w-9/12 justify-end">
                 <button className="bg-white text-primary p-4 rounded-3xl my-3 filter drop-shadow-xl hover:bg-primary hover:text-white font-semibold"
                     onClick={()=>{
                         // pdfExportComponent.current.save();
-                        savePDF(document.getElementsByClassName("pdf"), {
-                            paperSize: "A4",
-                        });
                         // setDownload(true)
-                        // if (pdfExportComponent.current) {
-                        //     setDownload(false);
-                        // }
+                        if (pdfExportComponent.current) {
+                            savePDF(document.getElementsByClassName("pdf"), {
+                                paperSize: "A4",
+                            });
+                            // setDownload(false);
+                        }
                     }}>Generate PDF</button>
             </div>
+            <PDFExport paperSize="A4" scale={0.6} margin="1.3cm" ref={pdfExportComponent}>
             <table className="table-auto w-9/12 rounded-xl">
                 <thead className="bg-primary text-white">
                     <tr className="border border-white-400 border-collapse">
@@ -180,12 +180,13 @@ function AdminHome() {
                                 <td className="p-2 border border-gray-400 border-collapse">{item.gender}</td>
                                 <td className="p-2 border border-gray-400 border-collapse">{item.mob}</td>
                                 <td className="p-2 last:bg-gray-100"> 
-                                    <button className="bg-primary rounded-3xl w-full text-white p-2 font-semibold" >View</button> </td>
+                                <button className="bg-primary rounded-3xl w-full text-white p-2 font-semibold" >View</button> </td>
                             </tr>
                         )
                     })}
                 </tbody>
             </table>
+            </PDFExport>
         </div>
     )
 }
